@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+/* ==================================================================
+
+  entry 記事本文
+------------------------------------------------------------------ */
+.entry-section {
+  & > h1 {
+    line-height: 1.25;
+    margin: 20px 0;
+    @include font_size(30);
+  }
+  .date {
+    font-weight: 700;
+    @include font_size(18);
+  }
+}
+.entry-body {
+  margin-top: 50px;
+  line-height: 1.75;
+  p,ul,ol,dl,blockquote, pre {
+    margin-bottom: 1.75em;
+  }
+  h2, h3, h4, h5, h6 {
+    margin-top: 1.25em;
+    margin-bottom: 0.75em;
+  }
+  h2 {
+    padding-top: 0.75em;
+    border-top: 3px dotted $black;
+    @include font_size(24);
+  }
+  ul {
+    li {
+      list-style-type: disc;
+      margin-top: 0.25em;
+      margin-left: 2.5em;
+    }
+  }
+  ol {
+    li {
+      list-style-type: decimal;
+      margin-top: 0.25em;
+      margin-left: 2.5em;
+    }
+  }
+  blockquote {
+    padding: 1.25em 1.25em 0.75em;
+    border-radius: 3px;
+    color: $gray;
+    font-style: italic;
+    background-color: $white;
+    p {
+      margin-bottom: 0.5em;
+    }
+  }
+  pre {
+    font-family: 'Source Code Pro', sans-serif;
+  }
+}

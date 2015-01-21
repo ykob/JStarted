@@ -1,0 +1,298 @@
+@charset "UTF-8";
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  font-size: 100%;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+  color: #333;
+  font-size: 100%;
+  font-family: "Montserrat Alternates", "メイリオ","Meiryo",verdana,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+img {
+  vertical-align: top;
+}
+
+li {
+  list-style: none;
+}
+
+cite, em, var {
+  font-style: normal;
+}
+
+ins {
+  text-decoration: none;
+}
+
+mark {
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+sup {
+  vertical-align: super;
+}
+
+sub {
+  vertical-align: sub;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption {
+  text-align: left;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+input, select, textarea, button {
+  -webkit-appearance: none;
+  font-size: 100%;
+  font-family: "メイリオ","Meiryo",verdana,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+}
+
+/* ==================================================================
+
+  基礎要素・汎用class
+------------------------------------------------------------------ */
+::selection {
+  background: #333333;
+  color: white;
+}
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  min-width: 1020px;
+  min-height: 100%;
+  overflow: hidden;
+  -webkit-text-size-adjust: none;
+  background-color: #e8e5d2;
+}
+
+.clearfix, #Contents {
+  min-height: 1px;
+}
+.clearfix:before, #Contents:before, .clearfix:after, #Contents:after {
+  content: "";
+  display: table;
+}
+.clearfix:after, #Contents:after {
+  clear: both;
+}
+
+/* ==================================================================
+
+  基礎レイアウト
+------------------------------------------------------------------ */
+#GlobalHeader {
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  background-color: #333333;
+}
+#GlobalHeader .inner {
+  width: 1020px;
+  height: 60px;
+  position: relative;
+  margin: 0 auto;
+}
+#GlobalHeader .website-title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -0.5em;
+  font-size: 171.42857%;
+}
+#GlobalHeader .website-title a {
+  color: white;
+  text-decoration: none;
+}
+#GlobalHeader .website-description {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  font-size: 71.42857%;
+}
+#GlobalHeader .big-banner {
+  position: absolute;
+  top: 75px;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+#GlobalHeader .feed a {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 50px;
+  border-radius: 0 0 3px 3px;
+  background-color: white;
+}
+
+#Contents {
+  width: 1020px;
+  margin: 180px auto 0;
+  padding: 30px 0;
+  border-top: 3px solid #333333;
+}
+
+#Main {
+  width: 680px;
+  float: left;
+}
+
+#Sub {
+  width: 300px;
+  float: right;
+}
+#Sub dl {
+  overflow: hidden;
+  margin-top: 30px;
+  border-radius: 3px;
+}
+#Sub dl dt {
+  background-color: #333333;
+}
+
+#GlobalFooter {
+  width: 1020px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 3px solid #333333;
+}
+
+/* ==================================================================
+
+  下層ページ
+------------------------------------------------------------------ */
+/* ==================================================================
+
+  entry 記事本文
+------------------------------------------------------------------ */
+.entry-section > h1 {
+  line-height: 1.25;
+  margin: 20px 0;
+  font-size: 214.28571%;
+}
+.entry-section .date {
+  font-weight: 700;
+  font-size: 128.57143%;
+}
+
+.entry-body {
+  margin-top: 50px;
+  line-height: 1.75;
+}
+.entry-body p, .entry-body ul, .entry-body ol, .entry-body dl, .entry-body blockquote, .entry-body pre {
+  margin-bottom: 1.75em;
+}
+.entry-body h2, .entry-body h3, .entry-body h4, .entry-body h5, .entry-body h6 {
+  margin-top: 1.25em;
+  margin-bottom: 0.75em;
+}
+.entry-body h2 {
+  padding-top: 0.75em;
+  border-top: 3px dotted #333333;
+  font-size: 171.42857%;
+}
+.entry-body ul li {
+  list-style-type: disc;
+  margin-top: 0.25em;
+  margin-left: 2.5em;
+}
+.entry-body ol li {
+  list-style-type: decimal;
+  margin-top: 0.25em;
+  margin-left: 2.5em;
+}
+.entry-body blockquote {
+  padding: 1.25em 1.25em 0.75em;
+  border-radius: 3px;
+  color: #999999;
+  font-style: italic;
+  background-color: white;
+}
+.entry-body blockquote p {
+  margin-bottom: 0.5em;
+}
+.entry-body pre {
+  font-family: 'Source Code Pro', sans-serif;
+}

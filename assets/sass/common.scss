@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+/* ==================================================================
+
+  基礎要素・汎用class
+------------------------------------------------------------------ */
+::selection{
+  background: $black;
+  color: $white;
+}
+html {
+  height: 100%;
+  overflow-y: scroll;
+}
+body {
+  min-width: 1020px;
+  min-height: 100%;
+  overflow: hidden;
+  -webkit-text-size-adjust: none;
+  background-color: #e8e5d2;
+}
+.clearfix {
+  min-height: 1px;
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+/* ==================================================================
+
+  基礎レイアウト
+------------------------------------------------------------------ */
+#Page {
+}
+#GlobalHeader {
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: $white;
+  background-color: $black;
+  .inner {
+    width: 1020px;
+    height: 60px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .website-title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -0.5em;
+    @include font_size(24);
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+  .website-description {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    @include font_size(10);
+  }
+  .big-banner {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    left: 0;
+    text-align: center;
+  }
+  .feed {
+    a {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5px 50px;
+      border-radius: 0 0 3px 3px;
+      background-color: $white;
+    }
+  }
+}
+#Contents {
+  width: 1020px;
+  margin: 180px auto 0;
+  padding: 30px 0;
+  border-top: 3px solid $black;
+  @extend .clearfix;
+}
+#Main {
+  width: 680px;
+  float: left;
+}
+#Sub {
+  width: 300px;
+  float: right;
+  dl {
+    overflow: hidden;
+    margin-top: 30px;
+    border-radius: 3px;
+    dt {
+      background-color: $black;
+    }
+    dd {
+      
+    }
+  }
+}
+#GlobalFooter {
+  width: 1020px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 3px solid $black;
+}
+/* ==================================================================
+
+  下層ページ
+------------------------------------------------------------------ */
+.lower {
+
+}
