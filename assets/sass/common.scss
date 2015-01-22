@@ -5,7 +5,7 @@
   基礎要素・汎用class
 ------------------------------------------------------------------ */
 ::selection{
-  background: $black;
+  background: $ash-dark2;
   color: $white;
 }
 html {
@@ -17,7 +17,15 @@ body {
   min-height: 100%;
   overflow: hidden;
   -webkit-text-size-adjust: none;
-  background-color: #e8e5d2;
+  background-color: $ash-light;
+}
+a {
+  color: $gray;
+  transition: 0.2s;
+  &:hover {
+  color: $gray-light;
+    text-decoration: none;
+  }
 }
 .clearfix {
   min-height: 1px;
@@ -43,7 +51,7 @@ body {
   left: 0;
   right: 0;
   color: $white;
-  background-color: $black;
+  background-color: $ash-dark2;
   .inner {
     width: 1020px;
     height: 60px;
@@ -59,6 +67,9 @@ body {
     a {
       color: $white;
       text-decoration: none;
+      &:hover {
+        color: $ash-light;
+      }
     }
   }
   .website-description {
@@ -82,19 +93,23 @@ body {
       right: 0;
       padding: 5px 50px;
       border-radius: 0 0 3px 3px;
+      color: $black;
+      text-decoration: none;
       background-color: $white;
+      &:hover {
+        background-color: $gray-light2;
+      }
     }
   }
 }
 #Contents {
   width: 1020px;
   margin: 180px auto 0;
-  padding: 30px 0;
-  border-top: 3px solid $black;
+  padding-bottom: 30px;
   @extend .clearfix;
 }
 #Main {
-  width: 680px;
+  width: 705px;
   float: left;
 }
 #Sub {
@@ -102,22 +117,57 @@ body {
   float: right;
   dl {
     overflow: hidden;
-    margin-top: 30px;
+    margin-top: 15px;
     border-radius: 3px;
     dt {
-      background-color: $black;
+      display: block;
+      padding: 15px 20px;
+      color: $white;
+      background-color: $ash-dark2;
     }
     dd {
-      
+      li {
+        border-top: 1px solid $white;
+      }
+      a {
+        display: block;
+        line-height: 1.25;
+        padding: 10px 20px;
+        color: $white;
+        text-decoration: none;
+        @include font_size(14);
+        background-color: $gray;
+        &:hover {
+          padding-left: 30px;
+          color: $white;
+          background-color: $gray-light;
+        }
+      }
     }
+  }
+}
+.profile-text {
+  line-height: 1.5;
+  padding: 15px 20px 20px;
+  @include font_size(14);
+  background-color: $white;
+  .name {
+    margin-bottom: 5px;
+    @include font_size(18, 14);
   }
 }
 #GlobalFooter {
   width: 1020px;
+  line-height: 1.75;
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 30px;
-  border-top: 3px solid $black;
+  border-top: 2px solid $black;
+  @include font_size(14);
+  text-align: center;
+  a {
+    color: $white;
+  }
 }
 /* ==================================================================
 

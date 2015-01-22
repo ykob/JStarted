@@ -125,7 +125,7 @@ input, select, textarea, button {
   基礎要素・汎用class
 ------------------------------------------------------------------ */
 ::selection {
-  background: #333333;
+  background: #42403d;
   color: white;
 }
 
@@ -139,7 +139,16 @@ body {
   min-height: 100%;
   overflow: hidden;
   -webkit-text-size-adjust: none;
-  background-color: #e8e5d2;
+  background-color: #ded3c0;
+}
+
+a {
+  color: #5d6d7a;
+  transition: 0.2s;
+}
+a:hover {
+  color: #b6c7d6;
+  text-decoration: none;
 }
 
 .clearfix, #Contents {
@@ -164,7 +173,7 @@ body {
   left: 0;
   right: 0;
   color: white;
-  background-color: #333333;
+  background-color: #42403d;
 }
 #GlobalHeader .inner {
   width: 1020px;
@@ -177,17 +186,20 @@ body {
   top: 50%;
   left: 0;
   margin-top: -0.5em;
-  font-size: 171.42857%;
+  font-size: 150%;
 }
 #GlobalHeader .website-title a {
   color: white;
   text-decoration: none;
 }
+#GlobalHeader .website-title a:hover {
+  color: #ded3c0;
+}
 #GlobalHeader .website-description {
   position: absolute;
   bottom: 10px;
   right: 0;
-  font-size: 71.42857%;
+  font-size: 62.5%;
 }
 #GlobalHeader .big-banner {
   position: absolute;
@@ -203,18 +215,22 @@ body {
   right: 0;
   padding: 5px 50px;
   border-radius: 0 0 3px 3px;
+  color: #333333;
+  text-decoration: none;
   background-color: white;
+}
+#GlobalHeader .feed a:hover {
+  background-color: #eeeeee;
 }
 
 #Contents {
   width: 1020px;
   margin: 180px auto 0;
-  padding: 30px 0;
-  border-top: 3px solid #333333;
+  padding-bottom: 30px;
 }
 
 #Main {
-  width: 680px;
+  width: 705px;
   float: left;
 }
 
@@ -224,19 +240,56 @@ body {
 }
 #Sub dl {
   overflow: hidden;
-  margin-top: 30px;
+  margin-top: 15px;
   border-radius: 3px;
 }
 #Sub dl dt {
-  background-color: #333333;
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  background-color: #42403d;
+}
+#Sub dl dd li {
+  border-top: 1px solid white;
+}
+#Sub dl dd a {
+  display: block;
+  line-height: 1.25;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 87.5%;
+  background-color: #5d6d7a;
+}
+#Sub dl dd a:hover {
+  padding-left: 30px;
+  color: white;
+  background-color: #b6c7d6;
+}
+
+.profile-text {
+  line-height: 1.5;
+  padding: 15px 20px 20px;
+  font-size: 87.5%;
+  background-color: white;
+}
+.profile-text .name {
+  margin-bottom: 5px;
+  font-size: 128.57143%;
 }
 
 #GlobalFooter {
   width: 1020px;
+  line-height: 1.75;
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 30px;
-  border-top: 3px solid #333333;
+  border-top: 2px solid #333333;
+  font-size: 87.5%;
+  text-align: center;
+}
+#GlobalFooter a {
+  color: white;
 }
 
 /* ==================================================================
@@ -245,21 +298,96 @@ body {
 ------------------------------------------------------------------ */
 /* ==================================================================
 
-  entry 記事本文
+  entry-list 記事一覧
 ------------------------------------------------------------------ */
-.entry-section > h1 {
-  line-height: 1.25;
-  margin: 20px 0;
-  font-size: 214.28571%;
+.entry-list-item {
+  margin-bottom: 15px;
 }
-.entry-section .date {
+.entry-list-item a {
+  display: block;
+  padding: 20px 30px 30px;
+  border-top: 5px solid #42403d;
+  border-radius: 3px;
+  color: #333333;
+  text-decoration: none;
+  background-color: white;
+}
+.entry-list-item a:hover {
+  background-color: #eeeeee;
+}
+.entry-list-item h1 {
+  line-height: 1.25;
+  margin-top: 10px;
+  font-size: 150%;
+}
+.entry-list-item .date {
+  line-height: 1.25;
   font-weight: 700;
-  font-size: 128.57143%;
+  font-size: 112.5%;
+}
+.entry-list-item .excerpt {
+  line-height: 1.75;
+  margin-top: 10px;
+  font-size: 87.5%;
 }
 
+.archiveTitle {
+  margin-bottom: 15px;
+  padding: 15px 30px;
+  border-radius: 3px;
+  color: white;
+  font-size: 150%;
+  background-color: #42403d;
+}
+
+.paging {
+  margin-top: 30px;
+  text-align: center;
+}
+.paging li {
+  display: inline-block;
+  margin: 0 2px;
+}
+.paging li a {
+  width: 30px;
+  display: block;
+  padding: 10px 0;
+  border-radius: 3px;
+  color: white;
+  text-decoration: none;
+  background-color: #5d6d7a;
+}
+.paging li a:hover {
+  background-color: #b6c7d6;
+}
+.paging li span {
+  width: 30px;
+  display: block;
+  padding: 10px 0;
+  border-radius: 3px;
+  color: #333333;
+  background-color: white;
+}
+
+/* ==================================================================
+
+  entry 記事本文
+------------------------------------------------------------------ */
 .entry-body {
-  margin-top: 50px;
   line-height: 1.75;
+  padding: 40px 30px;
+  border-radius: 3px;
+  border-top: 5px solid #42403d;
+  background-color: white;
+}
+.entry-body > h1 {
+  line-height: 1.25;
+  margin-bottom: 10px;
+  font-size: 187.5%;
+}
+.entry-body .date {
+  font-weight: 700;
+  font-size: 131.25%;
 }
 .entry-body p, .entry-body ul, .entry-body ol, .entry-body dl, .entry-body blockquote, .entry-body pre {
   margin-bottom: 1.75em;
@@ -270,8 +398,8 @@ body {
 }
 .entry-body h2 {
   padding-top: 0.75em;
-  border-top: 3px dotted #333333;
-  font-size: 171.42857%;
+  border-top: 3px dotted #42403d;
+  font-size: 150%;
 }
 .entry-body ul li {
   list-style-type: disc;
@@ -284,15 +412,227 @@ body {
   margin-left: 2.5em;
 }
 .entry-body blockquote {
-  padding: 1.25em 1.25em 0.75em;
+  position: relative;
+  padding: 1.25em 1.25em 0.75em 60px;
   border-radius: 3px;
-  color: #999999;
+  color: #5d6d7a;
   font-style: italic;
-  background-color: white;
+  background-color: #eeeeee;
+}
+.entry-body blockquote:before {
+  content: '“';
+  position: absolute;
+  top: 0;
+  left: 15px;
+  font-size: 300%;
 }
 .entry-body blockquote p {
   margin-bottom: 0.5em;
 }
-.entry-body pre {
+.entry-body code {
+  line-height: 1.5;
+  border-radius: 3px;
+  font-size: 87.5%;
   font-family: 'Source Code Pro', sans-serif;
+}
+
+.snsWidget {
+  margin-top: 15px;
+  padding: 15px 0;
+  border-radius: 3px;
+  text-align: center;
+  background-color: white;
+}
+.snsWidget li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 5px;
+}
+
+.rectangle-banner {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.adjacentLink {
+  margin-top: 15px;
+}
+.adjacentLink li {
+  margin-bottom: 5px;
+}
+.adjacentLink li a {
+  display: block;
+  line-height: 1.25;
+  padding: 10px 30px;
+  border-radius: 3px;
+  color: white;
+  text-decoration: none;
+  background-color: #5d6d7a;
+}
+.adjacentLink li a:hover {
+  background-color: #b6c7d6;
+}
+
+.blogtop a {
+  display: block;
+  line-height: 1.25;
+  padding: 10px 30px;
+  border-radius: 3px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  background-color: #5d6d7a;
+}
+.blogtop a:hover {
+  background-color: #b6c7d6;
+}
+
+/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+  background: #23241f;
+  -webkit-text-size-adjust: none;
+}
+
+.hljs,
+.hljs-tag,
+.css .hljs-rules,
+.css .hljs-value,
+.css .hljs-function
+.hljs-preprocessor,
+.hljs-pragma {
+  color: #f8f8f2;
+}
+
+.hljs-strongemphasis,
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-blockquote,
+.hljs-horizontal_rule,
+.hljs-number,
+.hljs-regexp,
+.alias .hljs-keyword,
+.hljs-literal,
+.hljs-hexcolor {
+  color: #ae81ff;
+}
+
+.hljs-tag .hljs-value,
+.hljs-code,
+.hljs-title,
+.css .hljs-class,
+.hljs-class .hljs-title:last-child {
+  color: #a6e22e;
+}
+
+.hljs-link_url {
+  font-size: 80%;
+}
+
+.hljs-strong,
+.hljs-strongemphasis {
+  font-weight: bold;
+}
+
+.hljs-emphasis,
+.hljs-strongemphasis,
+.hljs-class .hljs-title:last-child {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-function,
+.hljs-change,
+.hljs-winutils,
+.hljs-flow,
+.lisp .hljs-title,
+.clojure .hljs-built_in,
+.nginx .hljs-title,
+.tex .hljs-special,
+.hljs-header,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-symbol .hljs-string,
+.hljs-tag .hljs-title,
+.hljs-value,
+.alias .hljs-keyword:first-child,
+.css .hljs-tag,
+.css .unit,
+.css .hljs-important {
+  color: #f92672;
+}
+
+.hljs-function .hljs-keyword,
+.hljs-class .hljs-keyword:first-child,
+.hljs-constant,
+.css .hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-variable,
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.css .hljs-id,
+.hljs-subst,
+.hljs-type,
+.ruby .hljs-class .hljs-parent,
+.hljs-built_in,
+.django .hljs-template_tag,
+.django .hljs-variable,
+.smalltalk .hljs-class,
+.django .hljs-filter .hljs-argument,
+.smalltalk .hljs-localvars,
+.smalltalk .hljs-array,
+.hljs-attr_selector,
+.hljs-pseudo,
+.hljs-addition,
+.hljs-stream,
+.hljs-envvar,
+.apache .hljs-tag,
+.apache .hljs-cbracket,
+.tex .hljs-command,
+.hljs-prompt,
+.hljs-link_label,
+.hljs-link_url {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-javadoc,
+.hljs-annotation,
+.hljs-decorator,
+.hljs-template_comment,
+.hljs-pi,
+.hljs-doctype,
+.hljs-deletion,
+.hljs-shebang,
+.apache .hljs-sqbracket,
+.tex .hljs-formula {
+  color: #75715e;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata,
+.xml .php,
+.php .xml {
+  opacity: 0.5;
 }

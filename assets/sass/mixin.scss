@@ -2,9 +2,17 @@
 
 $white : #ffffff;
 $black : #333333;
-$gray : #999;
+$ash-light : #DED3C0;
+$ash : #BDAB8D;
+$ash-dark : #605A4F;
+$ash-dark2 : #42403D;
+$gray-light2 : #eee;
+$gray-light : #B6C7D6;
+$gray : #5D6D7A;
+$gray-dark : #34393E;
+$gray-dark2 : #0E0F10;
 
-@mixin font_size($fontSize, $baseFontSize:14){
+@mixin font_size($fontSize, $baseFontSize:16){
   font-size: percentage($fontSize / $baseFontSize);
 }
 @mixin box_center( $width : 980px ) {

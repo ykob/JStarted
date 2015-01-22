@@ -4,20 +4,21 @@
 
   entry 記事本文
 ------------------------------------------------------------------ */
-.entry-section {
+.entry-body {
+  line-height: 1.75;
+  padding: 40px 30px;
+  border-radius: 3px;
+  border-top: 5px solid $ash-dark2;
+  background-color: $white;
   & > h1 {
     line-height: 1.25;
-    margin: 20px 0;
+    margin-bottom: 10px;
     @include font_size(30);
   }
   .date {
     font-weight: 700;
-    @include font_size(18);
+    @include font_size(21);
   }
-}
-.entry-body {
-  margin-top: 50px;
-  line-height: 1.75;
   p,ul,ol,dl,blockquote, pre {
     margin-bottom: 1.75em;
   }
@@ -27,7 +28,7 @@
   }
   h2 {
     padding-top: 0.75em;
-    border-top: 3px dotted $black;
+    border-top: 3px dotted $ash-dark2;
     @include font_size(24);
   }
   ul {
@@ -45,16 +46,76 @@
     }
   }
   blockquote {
-    padding: 1.25em 1.25em 0.75em;
+    position: relative;
+    padding: 1.25em 1.25em 0.75em 60px;
     border-radius: 3px;
     color: $gray;
     font-style: italic;
-    background-color: $white;
+    background-color: $gray-light2;
+    &:before {
+      content: '“';
+      position: absolute;
+      top: 0;
+      left: 15px;
+      @include font_size(48);
+    }
     p {
       margin-bottom: 0.5em;
     }
   }
-  pre {
+  code {
+    line-height: 1.5;
+    border-radius: 3px;
+    @include font_size(14);
     font-family: 'Source Code Pro', sans-serif;
+  }
+}
+.snsWidget {
+  margin-top: 15px;
+  padding: 15px 0;
+  border-radius: 3px;
+  text-align: center;
+  background-color: $white;
+  li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5px;
+  }
+}
+.rectangle-banner {
+  margin: 15px 0;
+  text-align: center;
+}
+.adjacentLink {
+  margin-top: 15px;
+  li {
+    margin-bottom: 5px;
+    a {
+      display: block;
+      line-height: 1.25;
+      padding: 10px 30px;
+      border-radius: 3px;
+      color: $white;
+      text-decoration: none;
+      background-color: $gray;
+      &:hover {
+        background-color: $gray-light;
+      }
+    }
+  }
+}
+.blogtop {
+  a {
+    display: block;
+    line-height: 1.25;
+    padding: 10px 30px;
+    border-radius: 3px;
+    color: $white;
+    text-align: center;
+    text-decoration: none;
+    background-color: $gray;
+    &:hover {
+      background-color: $gray-light;
+    }
   }
 }
