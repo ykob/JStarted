@@ -62,15 +62,7 @@ a {
     position: absolute;
     top: 50%;
     left: 0;
-    margin-top: -0.5em;
-    @include font_size(24);
-    a {
-      color: $white;
-      text-decoration: none;
-      &:hover {
-        color: $ash-light;
-      }
-    }
+    margin-top: -18px;
   }
   .website-description {
     position: absolute;
