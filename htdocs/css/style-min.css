@@ -167,31 +167,31 @@ a:hover {
   基礎レイアウト
 ------------------------------------------------------------------ */
 #GlobalHeader {
-  height: 60px;
+  height: 180px;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   color: white;
-  background-color: #42403d;
 }
 #GlobalHeader .inner {
   width: 1020px;
-  height: 60px;
+  height: 180px;
   position: relative;
   margin: 0 auto;
 }
 #GlobalHeader .website-title {
   position: absolute;
-  top: 50%;
+  top: 36px;
   left: 0;
-  margin-top: -18px;
 }
 #GlobalHeader .website-description {
+  width: 380px;
+  line-height: 1.5;
   position: absolute;
-  bottom: 10px;
-  right: 0;
-  font-size: 62.5%;
+  top: 102px;
+  left: 0;
+  font-size: 87.5%;
 }
 #GlobalHeader .big-banner {
   position: absolute;
@@ -241,6 +241,10 @@ a:hover {
   color: white;
   background-color: #42403d;
 }
+#Sub dl dd figure {
+  margin-bottom: 10px;
+  text-align: center;
+}
 #Sub dl dd li {
   border-top: 1px solid white;
 }
@@ -280,25 +284,31 @@ a:hover {
   font-size: 87.5%;
   text-align: center;
 }
-#GlobalFooter a {
-  color: white;
-}
 
 /* ==================================================================
 
-  下層ページ
+  canvas
 ------------------------------------------------------------------ */
+#back-wave {
+  min-width: 1020px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
 /* ==================================================================
 
   entry-list 記事一覧
 ------------------------------------------------------------------ */
 .entry-list-item {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 .entry-list-item a {
   display: block;
-  padding: 20px 30px 30px;
-  border-top: 5px solid #42403d;
+  padding: 20px 30px;
+  border-left: 7px solid #5d6d7a;
   border-radius: 3px;
   color: #333333;
   text-decoration: none;
@@ -309,7 +319,7 @@ a:hover {
 }
 .entry-list-item h1 {
   line-height: 1.25;
-  margin-top: 10px;
+  margin-top: 5px;
   font-size: 150%;
 }
 .entry-list-item .date {
@@ -319,17 +329,16 @@ a:hover {
 }
 .entry-list-item .excerpt {
   line-height: 1.75;
-  margin-top: 10px;
+  margin-top: 5px;
   font-size: 87.5%;
 }
 
 .archiveTitle {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   padding: 15px 30px;
   border-radius: 3px;
-  color: white;
   font-size: 150%;
-  background-color: #42403d;
+  background-color: white;
 }
 
 .paging {
@@ -369,7 +378,6 @@ a:hover {
   line-height: 1.75;
   padding: 40px 30px;
   border-radius: 3px;
-  border-top: 5px solid #42403d;
   background-color: white;
 }
 .entry-body > h1 {

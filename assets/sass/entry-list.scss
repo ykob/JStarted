@@ -8,11 +8,11 @@
   
 }
 .entry-list-item {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   a {
     display: block;
-    padding: 20px 30px 30px;
-    border-top: 5px solid $ash-dark2;
+    padding: 20px 30px;
+    border-left: 7px solid $gray;
     border-radius: 3px;
     color: $black;
     text-decoration: none;
@@ -23,7 +23,7 @@
   }
   h1 {
     line-height: 1.25;
-    margin-top: 10px;
+    margin-top: 5px;
     @include font_size(24);
   }
   .date {
@@ -33,17 +33,16 @@
   }
   .excerpt {
     line-height: 1.75;
-    margin-top: 10px;
+    margin-top: 5px;
     @include font_size(14);
   }
 }
 .archiveTitle {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   padding: 15px 30px;
   border-radius: 3px;
-  color: $white;
   @include font_size(24);
-  background-color: $ash-dark2;
+  background-color: $white;
 }
 .paging {
   margin-top: 30px;
