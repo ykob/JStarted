@@ -18,35 +18,38 @@
     font-weight: 700;
     @include font_size(21);
   }
-  p,ul,ol,dl,blockquote, pre {
-    margin-bottom: 1.75em;
+  p,ul,ol,dl,blockquote, pre, table {
+    margin-bottom: 1.75rem;
   }
   h2, h3, h4, h5, h6 {
-    margin-top: 1.25em;
-    margin-bottom: 0.75em;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
   }
   h2 {
-    padding-top: 0.75em;
+    padding-top: 1.25rem;
     border-top: 3px dotted $ash-dark2;
     @include font_size(24);
+  }
+  h3 {
+    @include font_size(21);
   }
   ul {
     li {
       list-style-type: disc;
-      margin-top: 0.25em;
-      margin-left: 2.5em;
+      margin-top: 0.25rem;
+      margin-left: 2.5rem;
     }
   }
   ol {
     li {
       list-style-type: decimal;
-      margin-top: 0.25em;
-      margin-left: 2.5em;
+      margin-top: 0.25rem;
+      margin-left: 2.5rem;
     }
   }
   blockquote {
     position: relative;
-    padding: 1.25em 1.25em 0.75em 60px;
+    padding: 1.25rem 1.25rem 0.75rem 60px;
     border-radius: 3px;
     color: $gray;
     font-style: italic;
@@ -59,7 +62,7 @@
       @include font_size(48);
     }
     p {
-      margin-bottom: 0.5em;
+      margin-bottom: 0.5rem;
     }
   }
   code {
@@ -67,6 +70,36 @@
     border-radius: 3px;
     @include font_size(14);
     font-family: 'Source Code Pro', sans-serif;
+  }
+  table {
+    overflow: hidden;
+    border-radius: 3px;
+    tbody {
+      tr {
+        th {
+          padding: 0.5rem 1rem;
+          border-top: 1px solid #fff;
+          color: $white;
+          text-align: left;
+          background-color: $ash;
+        }
+        td {
+          padding: 0.5rem 1rem;
+          border-top: 1px solid #fff;
+          background-color: $gray-light2;
+        }
+      }
+    }
+  }
+  hr {
+    margin: 1.75rem 0;
+    border-top: 3px dotted $ash-dark2;
+  }
+  .img-center {
+    text-align: center;
+  }
+  .rectangle-banner {
+    margin: 3rem 0;
   }
 }
 .snsWidget {

@@ -140,6 +140,27 @@ a {
         }
       }
     }
+    &.recent-entries {
+      dd {
+        li {
+          border-top: 1px solid #ddd;
+        }
+        a {
+          color: #333;
+          background-color: #fff;
+          span {
+            display: block;
+            &.date {
+              margin-bottom: 5px;
+            }
+          }
+          &:hover {
+            color: $white;
+            background-color: $gray-light;
+          }
+        }
+      }
+    }
   }
 }
 .profile-text {
