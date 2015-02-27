@@ -125,8 +125,8 @@ input, select, textarea, button {
   基礎要素・汎用class
 ------------------------------------------------------------------ */
 ::selection {
-  background: #42403d;
-  color: white;
+  background: #42403D;
+  color: #ffffff;
 }
 
 html {
@@ -139,15 +139,15 @@ body {
   min-height: 100%;
   overflow: hidden;
   -webkit-text-size-adjust: none;
-  background-color: #ded3c0;
+  background-color: #DED3C0;
 }
 
 a {
-  color: #5d6d7a;
+  color: #5D6D7A;
   transition: 0.2s;
 }
 a:hover {
-  color: #b6c7d6;
+  color: #B6C7D6;
   text-decoration: none;
 }
 
@@ -172,7 +172,7 @@ a:hover {
   top: 0;
   left: 0;
   right: 0;
-  color: white;
+  color: #ffffff;
 }
 #GlobalHeader .inner {
   width: 1020px;
@@ -209,10 +209,10 @@ a:hover {
   border-radius: 0 0 3px 3px;
   color: #333333;
   text-decoration: none;
-  background-color: white;
+  background-color: #ffffff;
 }
 #GlobalHeader .feed a:hover {
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 #Contents {
@@ -238,29 +238,29 @@ a:hover {
 #Sub dl dt {
   display: block;
   padding: 15px 20px;
-  color: white;
-  background-color: #42403d;
+  color: #ffffff;
+  background-color: #42403D;
 }
 #Sub dl dd figure {
   margin-bottom: 10px;
   text-align: center;
 }
 #Sub dl dd li {
-  border-top: 1px solid white;
+  border-top: 1px solid #ffffff;
 }
 #Sub dl dd a {
   display: block;
   line-height: 1.25;
   padding: 10px 20px;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-size: 87.5%;
-  background-color: #5d6d7a;
+  background-color: #5D6D7A;
 }
 #Sub dl dd a:hover {
   padding-left: 30px;
-  color: white;
-  background-color: #b6c7d6;
+  color: #ffffff;
+  background-color: #B6C7D6;
 }
 #Sub dl.recent-entries dd li {
   border-top: 1px solid #ddd;
@@ -276,15 +276,15 @@ a:hover {
   margin-bottom: 5px;
 }
 #Sub dl.recent-entries dd a:hover {
-  color: white;
-  background-color: #b6c7d6;
+  color: #ffffff;
+  background-color: #B6C7D6;
 }
 
 .profile-text {
   line-height: 1.5;
   padding: 15px 20px 20px;
   font-size: 87.5%;
-  background-color: white;
+  background-color: #ffffff;
 }
 .profile-text .name {
   margin-bottom: 5px;
@@ -325,14 +325,14 @@ a:hover {
 .entry-list-item a {
   display: block;
   padding: 20px 30px;
-  border-left: 7px solid #5d6d7a;
+  border-left: 7px solid #5D6D7A;
   border-radius: 3px;
   color: #333333;
   text-decoration: none;
-  background-color: white;
+  background-color: #ffffff;
 }
 .entry-list-item a:hover {
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 .entry-list-item h1 {
   line-height: 1.25;
@@ -355,7 +355,7 @@ a:hover {
   padding: 15px 30px;
   border-radius: 3px;
   font-size: 150%;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .paging {
@@ -371,12 +371,12 @@ a:hover {
   display: block;
   padding: 10px 0;
   border-radius: 3px;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-  background-color: #5d6d7a;
+  background-color: #5D6D7A;
 }
 .paging li a:hover {
-  background-color: #b6c7d6;
+  background-color: #B6C7D6;
 }
 .paging li span {
   width: 30px;
@@ -384,7 +384,7 @@ a:hover {
   padding: 10px 0;
   border-radius: 3px;
   color: #333333;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 /* ==================================================================
@@ -395,7 +395,7 @@ a:hover {
   line-height: 1.75;
   padding: 40px 30px;
   border-radius: 3px;
-  background-color: white;
+  background-color: #ffffff;
 }
 .entry-body > h1 {
   line-height: 1.25;
@@ -415,7 +415,7 @@ a:hover {
 }
 .entry-body h2 {
   padding-top: 1.25rem;
-  border-top: 3px dotted #42403d;
+  border-top: 3px dotted #42403D;
   font-size: 150%;
 }
 .entry-body h3 {
@@ -435,9 +435,9 @@ a:hover {
   position: relative;
   padding: 1.25rem 1.25rem 0.75rem 60px;
   border-radius: 3px;
-  color: #5d6d7a;
+  color: #5D6D7A;
   font-style: italic;
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 .entry-body blockquote:before {
   content: '“';
@@ -462,18 +462,18 @@ a:hover {
 .entry-body table tbody tr th {
   padding: 0.5rem 1rem;
   border-top: 1px solid #fff;
-  color: white;
+  color: #ffffff;
   text-align: left;
-  background-color: #bdab8d;
+  background-color: #BDAB8D;
 }
 .entry-body table tbody tr td {
   padding: 0.5rem 1rem;
   border-top: 1px solid #fff;
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 .entry-body hr {
   margin: 1.75rem 0;
-  border-top: 3px dotted #42403d;
+  border-top: 3px dotted #42403D;
 }
 .entry-body .img-center {
   text-align: center;
@@ -481,13 +481,24 @@ a:hover {
 .entry-body .rectangle-banner {
   margin: 3rem 0;
 }
+.entry-body .snsWidget-inbody {
+  margin-top: 15px;
+  padding: 0;
+  text-align: right;
+}
+.entry-body .snsWidget-inbody li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 5px;
+  padding: 0;
+}
 
 .snsWidget {
   margin-top: 15px;
   padding: 15px 0;
   border-radius: 3px;
   text-align: center;
-  background-color: white;
+  background-color: #ffffff;
 }
 .snsWidget li {
   display: inline-block;
@@ -511,12 +522,12 @@ a:hover {
   line-height: 1.25;
   padding: 10px 30px;
   border-radius: 3px;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-  background-color: #5d6d7a;
+  background-color: #5D6D7A;
 }
 .adjacentLink li a:hover {
-  background-color: #b6c7d6;
+  background-color: #B6C7D6;
 }
 
 .blogtop a {
@@ -524,13 +535,13 @@ a:hover {
   line-height: 1.25;
   padding: 10px 30px;
   border-radius: 3px;
-  color: white;
+  color: #ffffff;
   text-align: center;
   text-decoration: none;
-  background-color: #5d6d7a;
+  background-color: #5D6D7A;
 }
 .blogtop a:hover {
-  background-color: #b6c7d6;
+  background-color: #B6C7D6;
 }
 
 /*
@@ -682,3 +693,5 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 .php .xml {
   opacity: 0.5;
 }
+
+/*# sourceMappingURL=style-min.css.map */
