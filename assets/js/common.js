@@ -6,13 +6,15 @@
 // =========================================================
 
 var width  = document.body.clientWidth;
-var height = 440;
-var canvas = document.getElementById('back-wave');
+var height = document.body.clientHeight;
+var canvas = document.getElementById('backgroundCanvas');
 var ctx = canvas.getContext('2d');
 var fps = 60;
 var frameTime = 1000 / fps;
-var wavePointArr = [];
-var lastTime = +new Date();
+var objArr = [];
+var instanceNum = 0;
+var lastTimeRender = +new Date();
+var lastTimePushObj = +new Date();
 
 var getRandomInt = function(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
@@ -42,66 +44,80 @@ debounce(window, 'resize', function(){
 
 canvasResize();
 
-var backWave = function() {
-  this.spy = height * 0.4;
-  this.epy = height * 0.45;
-  
-  var wavePoint = function(x, y) {
-    this.k = getRandomInt(1, 10) / 5500;
-    this.x = x;
-    this.y = y;
-    this.py = y;
-    this.ay = 0;
-    this.vy = 0.5;
-  };
-
-  wavePoint.prototype.move = function() {
-    this.ay = (this.py - this.y) * this.k;
-    this.vy += this.ay;
-    this.y += this.vy;
-  };
-  
-  wavePointArr[0] = new wavePoint(width * 0.2, height * 0.6);
-  wavePointArr[1] = new wavePoint(width * 0.8, height * 0.2);
+var motionObj = function(x, y) {
+  this.r = getRandomInt(4, 24);
+  this.g = getRandomInt(5, 10) / 1000 / fps;
+  this.t = 0;
+  this.k = getRandomInt(1, 5) / 1000;
+  this.x = x;
+  this.px = x;
+  this.ax = 0;
+  this.vx = 0.5;
+  this.hsl = getRandomInt(60, 120) + ', 45%, 80%';
+  this.alpha = getRandomInt(40, 90);
+  this.y = y;
 };
 
-backWave.prototype.render = function() {
-  for (var i = 0; i < wavePointArr.length; i++) {
-    wavePointArr[i].move();
-  }
-  
-  ctx.fillStyle = '#42403D';
-  
+motionObj.prototype.move = function () {
+  this.t += frameTime;
+  this.ax = (this.px - this.x) * this.k;
+  this.vx += this.ax;
+  this.x += this.vx;
+  this.y = 1 / 2 * this.g * this.t * this.t - this.r * 3;
+};
+
+motionObj.prototype.fadeAway = function () {
+  if (this.t < 1400) return;
+  this.alpha -= 1;
+};
+
+motionObj.prototype.render = function (){
   ctx.beginPath();
-  ctx.moveTo(-100, 0);
-  ctx.lineTo(-100, this.spy);
-  for (var i = 0; i < wavePointArr.length; i++) {
-    if (i == wavePointArr.length - 1) {
-      ctx.quadraticCurveTo(wavePointArr[i].x, wavePointArr[i].y, width + 100, this.epy);
-    } else {
-      ctx.quadraticCurveTo(wavePointArr[i].x, wavePointArr[i].y, (wavePointArr[i + 1].x + wavePointArr[i].x) / 2, (wavePointArr[i + 1].y + wavePointArr[i].y) / 2);
-    }
-  }
-  ctx.lineTo(width + 100, 0);
-  ctx.lineTo(0, 0);
+  ctx.shadowBlur = this.r * 3;
+  ctx.shadowColor = 'rgba(255, 255, 255, 1)';
+  ctx.fillStyle = 'hsla(' + this.hsl + ', ' + (this.alpha / 100) + ')';
+  ctx.arc(this.x, this.y, this.r, 0, 360 * Math.PI/180, false);
   ctx.fill();
   ctx.closePath();
 };
 
+motionObj.prototype.isLast = function (){
+  if (this.alpha < 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
 var render = function() {
   ctx.clearRect(0, 0, width, height);
-  backWave.render();
+  instanceNum = 0;
+  for (var i = 0; i < objArr.length; i++) {
+    if(objArr[i]) {
+      instanceNum++;
+      objArr[i].move();
+      objArr[i].fadeAway();
+      objArr[i].render();
+      if (objArr[i].isLast()) {
+        delete objArr[i];
+      }
+    }
+  }
 };
 
 var renderloop = function() {
   var now = +new Date();
-  
   requestAnimationFrame(renderloop);
-  if (now - lastTime < frameTime) {
-    return;
+  if (now - lastTimeRender > frameTime) {
+    render();
+    lastTimeRender = +new Date();
   }
-  render();
+  
+  if (now - lastTimePushObj > 500 && instanceNum < 100) {
+    for (var i = 0; i < 10; i++) {
+      objArr.push(new motionObj(Math.random() * width, 0));
+    }
+    lastTimePushObj = +new Date();
+  }
 };
 renderloop();
-
-var backWave = new backWave();

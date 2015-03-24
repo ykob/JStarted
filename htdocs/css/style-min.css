@@ -125,7 +125,7 @@ input, select, textarea, button {
   基礎要素・汎用class
 ------------------------------------------------------------------ */
 ::selection {
-  background: #42403D;
+  background: #414132;
   color: #ffffff;
 }
 
@@ -139,15 +139,15 @@ body {
   min-height: 100%;
   overflow: hidden;
   -webkit-text-size-adjust: none;
-  background-color: #DED3C0;
+  background-color: #28280a;
 }
 
 a {
-  color: #5D6D7A;
+  color: #5a6450;
   transition: 0.2s;
 }
 a:hover {
-  color: #B6C7D6;
+  color: #828c78;
   text-decoration: none;
 }
 
@@ -239,7 +239,7 @@ a:hover {
   display: block;
   padding: 15px 20px;
   color: #ffffff;
-  background-color: #42403D;
+  background-color: #414132;
 }
 #Sub dl dd figure {
   margin-bottom: 10px;
@@ -255,12 +255,12 @@ a:hover {
   color: #ffffff;
   text-decoration: none;
   font-size: 87.5%;
-  background-color: #5D6D7A;
+  background-color: #5a6450;
 }
 #Sub dl dd a:hover {
   padding-left: 30px;
   color: #ffffff;
-  background-color: #B6C7D6;
+  background-color: #828c78;
 }
 #Sub dl.recent-entries dd li {
   border-top: 1px solid #ddd;
@@ -277,7 +277,7 @@ a:hover {
 }
 #Sub dl.recent-entries dd a:hover {
   color: #ffffff;
-  background-color: #B6C7D6;
+  background-color: #828c78;
 }
 
 .profile-text {
@@ -297,7 +297,8 @@ a:hover {
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 30px;
-  border-top: 2px solid #333333;
+  border-top: 2px solid #828c78;
+  color: #828c78;
   font-size: 87.5%;
   text-align: center;
 }
@@ -306,9 +307,9 @@ a:hover {
 
   canvas
 ------------------------------------------------------------------ */
-#back-wave {
+#backgroundCanvas {
   min-width: 1020px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -325,7 +326,7 @@ a:hover {
 .entry-list-item a {
   display: block;
   padding: 20px 30px;
-  border-left: 7px solid #5D6D7A;
+  border-left: 7px solid #5a6450;
   border-radius: 3px;
   color: #333333;
   text-decoration: none;
@@ -373,10 +374,10 @@ a:hover {
   border-radius: 3px;
   color: #ffffff;
   text-decoration: none;
-  background-color: #5D6D7A;
+  background-color: #5a6450;
 }
 .paging li a:hover {
-  background-color: #B6C7D6;
+  background-color: #828c78;
 }
 .paging li span {
   width: 30px;
@@ -415,7 +416,7 @@ a:hover {
 }
 .entry-body h2 {
   padding-top: 1.25rem;
-  border-top: 3px dotted #42403D;
+  border-top: 3px dotted #414132;
   font-size: 150%;
 }
 .entry-body h3 {
@@ -435,7 +436,7 @@ a:hover {
   position: relative;
   padding: 1.25rem 1.25rem 0.75rem 60px;
   border-radius: 3px;
-  color: #5D6D7A;
+  color: #5a6450;
   font-style: italic;
   background-color: #eee;
 }
@@ -464,7 +465,7 @@ a:hover {
   border-top: 1px solid #fff;
   color: #ffffff;
   text-align: left;
-  background-color: #BDAB8D;
+  background-color: #64643c;
 }
 .entry-body table tbody tr td {
   padding: 0.5rem 1rem;
@@ -473,7 +474,7 @@ a:hover {
 }
 .entry-body hr {
   margin: 1.75rem 0;
-  border-top: 3px dotted #42403D;
+  border-top: 3px dotted #414132;
 }
 .entry-body .img-center {
   text-align: center;
@@ -524,10 +525,10 @@ a:hover {
   border-radius: 3px;
   color: #ffffff;
   text-decoration: none;
-  background-color: #5D6D7A;
+  background-color: #5a6450;
 }
 .adjacentLink li a:hover {
-  background-color: #B6C7D6;
+  background-color: #828c78;
 }
 
 .blogtop a {
@@ -538,10 +539,10 @@ a:hover {
   color: #ffffff;
   text-align: center;
   text-decoration: none;
-  background-color: #5D6D7A;
+  background-color: #5a6450;
 }
 .blogtop a:hover {
-  background-color: #B6C7D6;
+  background-color: #828c78;
 }
 
 /*

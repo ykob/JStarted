@@ -2,15 +2,13 @@
 
 $white : #ffffff;
 $black : #333333;
-$ash-light : #DED3C0;
-$ash : #BDAB8D;
-$ash-dark : #605A4F;
-$ash-dark2 : #42403D;
+$ash-light : rgba(80, 80, 70, 1);
+$ash : rgba(100, 100, 60, 1);
+$ash-dark : rgba(75, 75, 60, 1);
+$ash-dark2 : rgba(65, 65, 50, 1);
 $gray-light2 : #eee;
-$gray-light : #B6C7D6;
-$gray : #5D6D7A;
-$gray-dark : #34393E;
-$gray-dark2 : #0E0F10;
+$gray-light : rgba(130, 140, 120, 1);
+$gray : rgba(90, 100, 80, 1);
 
 @mixin font_size($fontSize, $baseFontSize:16){
   font-size: percentage($fontSize / $baseFontSize);

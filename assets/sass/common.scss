@@ -17,7 +17,7 @@ body {
   min-height: 100%;
   overflow: hidden;
   -webkit-text-size-adjust: none;
-  background-color: $ash-light;
+  background-color: rgba(40,40,10,1);
 }
 a {
   color: $gray;
@@ -179,7 +179,8 @@ a {
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 30px;
-  border-top: 2px solid $black;
+  border-top: 2px solid $gray-light;
+  color: $gray-light;
   @include font_size(14);
   text-align: center;
 }
@@ -187,9 +188,9 @@ a {
 
   canvas
 ------------------------------------------------------------------ */
-#back-wave {
+#backgroundCanvas {
   min-width: 1020px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
