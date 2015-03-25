@@ -45,7 +45,7 @@ a {
 #Page {
 }
 #GlobalHeader {
-  height: 180px;
+  height: 200px;
   position: absolute;
   top: 0;
   left: 0;
@@ -53,21 +53,24 @@ a {
   color: $white;
   .inner {
     width: 1020px;
-    height: 180px;
+    height: 200px;
     position: relative;
     margin: 0 auto;
   }
   .website-title {
     position: absolute;
-    top: 36px;
+    top: 50px;
+    right: 0;
     left: 0;
+    text-align: center;
   }
   .website-description {
-    width: 380px;
     line-height: 1.5;
     position: absolute;
-    top: 102px;
+    top: 125px;
+    right: 0;
     left: 0;
+    text-align: center;
     @include font_size(14);
   }
   .big-banner {
@@ -96,7 +99,7 @@ a {
 }
 #Contents {
   width: 1020px;
-  margin: 180px auto 0;
+  margin: 200px auto 0;
   padding-bottom: 30px;
   @extend .clearfix;
 }
