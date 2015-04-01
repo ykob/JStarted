@@ -45,7 +45,7 @@ debounce(window, 'resize', function(){
 canvasResize();
 
 var motionObj = function(x, y) {
-  this.r = getRandomInt(4, 24);
+  this.r = getRandomInt(4, 20);
   this.g = getRandomInt(5, 10) / 1000 / fps;
   this.t = 0;
   this.k = getRandomInt(1, 5) / 1000;
@@ -54,7 +54,7 @@ var motionObj = function(x, y) {
   this.ax = 0;
   this.vx = 0.5;
   this.hsl = getRandomInt(60, 120) + ', 45%, 80%';
-  this.alpha = getRandomInt(40, 90);
+  this.alpha = getRandomInt(30, 50);
   this.y = y;
 };
 
@@ -67,14 +67,12 @@ motionObj.prototype.move = function () {
 };
 
 motionObj.prototype.fadeAway = function () {
-  if (this.t < 1400) return;
-  this.alpha -= 1;
+  if (this.t < 1500) return;
+  this.alpha -= 0.5;
 };
 
 motionObj.prototype.render = function (){
   ctx.beginPath();
-  ctx.shadowBlur = this.r * 3;
-  ctx.shadowColor = 'rgba(255, 255, 255, 1)';
   ctx.fillStyle = 'hsla(' + this.hsl + ', ' + (this.alpha / 100) + ')';
   ctx.arc(this.x, this.y, this.r, 0, 360 * Math.PI/180, false);
   ctx.fill();
@@ -113,7 +111,7 @@ var renderloop = function() {
     lastTimeRender = +new Date();
   }
   
-  if (now - lastTimePushObj > 500 && instanceNum < 100) {
+  if (now - lastTimePushObj > 250) {
     for (var i = 0; i < 10; i++) {
       objArr.push(new motionObj(Math.random() * width, 0));
     }
