@@ -18,6 +18,9 @@ body {
   overflow: hidden;
   -webkit-text-size-adjust: none;
   background-color: rgba(40,40,10,1);
+  @media #{$spView} {
+    min-width: 100%;
+  }
 }
 a {
   color: $gray;
@@ -43,6 +46,7 @@ a {
   基礎レイアウト
 ------------------------------------------------------------------ */
 #Page {
+  padding: 0 10px;
 }
 #GlobalHeader {
   height: 200px;
@@ -56,6 +60,9 @@ a {
     height: 200px;
     position: relative;
     margin: 0 auto;
+    @media #{$spView} {
+      width: auto;
+    }
   }
   .website-title {
     position: absolute;
@@ -63,6 +70,12 @@ a {
     right: 0;
     left: 0;
     text-align: center;
+    @media #{$spView} {
+      padding: 0 10px;
+      svg {
+        width: 100%;
+      }
+    }
   }
   .website-description {
     line-height: 1.5;
@@ -72,6 +85,9 @@ a {
     left: 0;
     text-align: center;
     @include font_size(14);
+    @media #{$spView} {
+      padding: 0 10px;
+    }
   }
   .big-banner {
     position: absolute;
@@ -102,14 +118,29 @@ a {
   margin: 200px auto 0;
   padding-bottom: 30px;
   @extend .clearfix;
+  @media #{$spView} {
+    width: auto;
+  }
 }
 #Main {
   width: 705px;
   float: left;
+  @media #{$spView} {
+    width: auto;
+    float: none;
+    margin-bottom: 20px;
+  }
 }
 #Sub {
   width: 300px;
   float: right;
+  @media #{$spView} {
+    width: auto;
+    float: none;
+  }
+  .banner {
+    text-align: center;
+  }
   dl {
     overflow: hidden;
     margin-top: 15px;
@@ -186,6 +217,9 @@ a {
   color: $gray-light;
   @include font_size(14);
   text-align: center;
+  @media #{$spView} {
+    width: auto;
+  }
 }
 /* ==================================================================
 
@@ -198,4 +232,7 @@ a {
   left: 0;
   right: 0;
   z-index: -1;
+  @media #{$spView} {
+    min-width: 100%;
+  }
 }

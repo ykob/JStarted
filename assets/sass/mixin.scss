@@ -10,6 +10,8 @@ $gray-light2 : #eee;
 $gray-light : rgba(130, 140, 120, 1);
 $gray : rgba(90, 100, 80, 1);
 
+$spView: "(max-width: 540px)";
+
 @mixin font_size($fontSize, $baseFontSize:16){
   font-size: percentage($fontSize / $baseFontSize);
 }
