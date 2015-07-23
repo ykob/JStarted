@@ -39,12 +39,6 @@
             RSS
           </a>
         </div>
-        <ul class="article-sns-widget">
-          <li class="facebook"></li>
-          <li class="twitter"></li>
-          <li class="googleplus"></li>
-          <li class="hatena"></li>
-        </ul>
       </div>
       
       <div class="contents">
@@ -52,16 +46,10 @@
           <div class="article-list">
             <div class="article-list-item">
               <a href="">
-                <h2 class="article-header__list-item">
-                  記事タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
-                </h2>
-                <p class="article-data">
-                  Post: <span class="article-post-date">2015/12/31</span>
-                  Category: <a href="" class="aritcle-category">カテゴリ名</a>
-                </p>
-                <p class="article-summary">
+                <h2 class="article-item-header">
                   
-                </p>
+                </h2>
+                
               </a>
             </div>
           </div>
@@ -95,60 +83,25 @@
               Recommend Book
             </h2>
             
-            <div class="book-list">
-              <div class="book-list-item">
-                <figure class="book-thumbnail">
-                  <img src="" alt="">
-                </figure>
-                <div class="book-body">
-                  <h3 class="book-header">
-                    本のタイトルテキストテキスト
-                  </h3>
-                  <p class="book-summary">
-                    本の概要文テキストテキストテキストテキストテキストテキスト
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
           
           <div class="sub-section category-archive">
             <h2 class="sub-header">
               Category Archive
             </h2>
-            <ul class="sub-menu-list">
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-            </ul>
+            
           </div>
           
           <div class="sub-section yearly-archive">
             <h2 class="sub-header">
               Yearly Archive
             </h2>
-            <ul class="sub-menu-list">
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-            </ul>
           </div>
           
           <div class="sub-section recent-entries">
             <h2 class="sub-header">
               Recent Entries
             </h2>
-            <ul class="sub-menu-list">
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-            </ul>
           </div>
         </div>
       </div>

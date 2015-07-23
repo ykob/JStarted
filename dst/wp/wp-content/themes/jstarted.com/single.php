@@ -13,6 +13,12 @@
     <meta property="og:url" content="">
     <meta property="og:image" content="">
     
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@ykob0123">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    
     <link rel="index" href="/">
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat Alternates:400,700">
@@ -21,29 +27,40 @@
   </head>
   <body>
     <div class="page">
-      <div class="global-header">
-        <h1 class="website-title">
-          <img src="/img/logo.svg" alt="jstarted.com">
-        </h1>
-        <p class="website-summary">
-          フロントエンドエンジニアによるJavaScript/HTML/CSSのノウハウや覚書を掲載しています。
-        </p>
-        <div class="gmenu-rss">
-          <a href="">
-            RSS
-          </a>
-        </div>
-        <ul class="article-sns-widget">
-          <li class="facebook"></li>
-          <li class="twitter"></li>
-          <li class="googleplus"></li>
-          <li class="hatena"></li>
-        </ul>
-      </div>
-      
       <div class="contents">
         <div class="main">
+          <div class="article">
+            <header class="article-header">
+              <h1 class="article-title">
+                記事タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+              </h1>
+              <p class="article-data">
+                Post: <span class="article-post-date">2015/12/31</span>
+                Category: <a href="" class="aritcle-category"></a>
+              </p>
+            </header>
+            
+            <div class="article-body">
+              
+            </div>
+          </div>
           
+          <ul class="adjacent-link">
+            <li class="preview">
+              <a href="">
+                前の記事 「」
+              </a>
+            </li>
+            <li class="next">
+              <a href="">
+                次の記事 「」
+              </a>
+            </li>
+          </ul>
+          
+          <p class="blogtop">
+            <a href="/">トップページにもどる</a>
+          </p>
         </div>
         
         <div class="sub">
@@ -74,61 +91,40 @@
               Recommend Book
             </h2>
             
-            <div class="book-list">
-              <div class="book-list-item">
-                <figure class="book-thumbnail">
-                  <img src="" alt="">
-                </figure>
-                <div class="book-body">
-                  <h3 class="book-header">
-                    本のタイトルテキストテキスト
-                  </h3>
-                  <p class="book-summary">
-                    本の概要文テキストテキストテキストテキストテキストテキスト
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
           
           <div class="sub-section category-archive">
             <h2 class="sub-header">
               Category Archive
             </h2>
-            <ul class="sub-menu-list">
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-            </ul>
+            
           </div>
           
           <div class="sub-section yearly-archive">
             <h2 class="sub-header">
               Yearly Archive
             </h2>
-            <ul class="sub-menu-list">
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-            </ul>
           </div>
           
           <div class="sub-section recent-entries">
             <h2 class="sub-header">
               Recent Entries
             </h2>
-            <ul class="sub-menu-list">
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-              <li><a href="">menu name (00)</a></li>
-            </ul>
           </div>
+        </div>
+      </div>
+      
+      <div class="global-header">
+        <p class="website-title">
+          <img src="/img/logo.svg" alt="jstarted.com">
+        </p>
+        <p class="website-summary">
+          フロントエンドエンジニアによるJavaScript/HTML/CSSのノウハウや覚書を掲載しています。
+        </p>
+        <div class="gmenu-rss">
+          <a href="">
+            RSS
+          </a>
         </div>
       </div>
       

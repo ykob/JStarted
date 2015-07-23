@@ -15,7 +15,7 @@
   "license": "MIT",
   "projectConfig": {
     "PATH": "",
-    "DST": "dst",
+    "DST": "dst/wp/wp-content/themes/jstarted.com",
     "SRC": "src"
   }
 }
