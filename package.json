@@ -14,8 +14,8 @@
   "author": "yoichi kobayashi",
   "license": "MIT",
   "projectConfig": {
-    "PATH": "",
-    "DST": "dst/wp/wp-content/themes/jstarted.com",
+    "PATH": "/wp/wp-content/themes/jstarted.com",
+    "DST": "dst",
     "SRC": "src"
   }
 }

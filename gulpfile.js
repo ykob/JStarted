@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var php = require('gulp-connect-php');
 var browserSync = require('browser-sync');
 var sequence = require('gulp-sequence');
 var requireDir = require('require-dir');
@@ -7,18 +8,25 @@ var reload = browserSync.reload;
 
 requireDir('./tasks');
 
-gulp.task('serve', function() {
+gulp.task('php', function() {
+    php.server({ base: 'build', port: 8010, keepalive: true});
+});
+
+gulp.task('serve', ['php'], function() {
   var obj = {};
   
   return browserSync({
-    server: {
-      baseDir: './',
-      index: CONFIG.DST + CONFIG.PATH + '/index.html',
-      routes: (
-        obj['' + CONFIG.PATH] = '' + CONFIG.DST + CONFIG.PATH + '/',
-        obj
-      )
-    }
+    proxy: '127.0.0.1:8010',
+    open: true,
+    notify: false
+    // server: {
+    //   baseDir: './',
+    //   index: CONFIG.DST + CONFIG.PATH + '/index.php',
+    //   routes: (
+    //     obj['' + CONFIG.PATH] = '' + CONFIG.DST + CONFIG.PATH + '/',
+    //     obj
+    //   )
+    // }
   });
 });
 
