@@ -1,4 +1,4 @@
-# JStarted
+# jstarted.com
 
 JavaScript/HTML/CSSのノウハウや覚書を掲載するブログ。
 
