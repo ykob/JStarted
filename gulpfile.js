@@ -20,9 +20,7 @@ gulp.task('serve', ['php'], function() {
   var obj = {};
   
   return browserSync({
-    proxy: '127.0.0.1:8010',
-    open: true,
-    notify: false
+    proxy: '127.0.0.1:8010'
     // server: {
     //   baseDir: './',
     //   index: CONFIG.DST + CONFIG.PATH + '/index.php',

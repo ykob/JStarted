@@ -1,2 +1,20 @@
 @charset "utf-8";
 
+.global-header {
+  position: relative;
+  padding: 60px 30px 45px;
+  color: #fff;
+  background-color: #333;
+}
+.website-title {
+  max-width: 540px;
+  margin: 0 auto;
+}
+.website-summary {
+  text-align: center;
+}
+.gmenu-rss {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}

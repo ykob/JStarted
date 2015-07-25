@@ -22,7 +22,7 @@
     <link rel="index" href="/">
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat Alternates:400,700">
-    <link rel="stylesheet" href="/css/style-min.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="alternate" href="/feed/jstarted.xml" type="application/rss+xml" title="">
   </head>
   <body>

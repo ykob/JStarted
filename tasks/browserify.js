@@ -28,7 +28,7 @@ var bundler = function(watch) {
               console.log('bundle error: ' + err);
             })
             .pipe(source('main.js'))
-            .pipe(gulp.dest('./' + CONFIG.DST + '/js/'));
+            .pipe(gulp.dest('./' + CONFIG.DST + CONFIG.PATH + '/js/'));
   };
 
   b
