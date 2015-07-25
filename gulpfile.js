@@ -9,7 +9,11 @@ var reload = browserSync.reload;
 requireDir('./tasks');
 
 gulp.task('php', function() {
-    php.server({ base: 'build', port: 8010, keepalive: true});
+    php.server({
+      base: CONFIG.DST + CONFIG.PATH,
+      port: 8010,
+      keepalive: true
+    });
 });
 
 gulp.task('serve', ['php'], function() {
@@ -36,7 +40,7 @@ gulp.task('start', sequence([
 ], 'serve'));
 
 gulp.task('default', ['start'], function() {
-  gulp.watch(['./' + CONFIG.DST + '/**/*.html'], [reload]);
+  gulp.watch(['./' + CONFIG.DST + '/**/*.php'], [reload]);
   gulp.watch(['./' + CONFIG.SRC + '/**/*.{scss,sass}'], ['sass', reload]);
   gulp.watch(['./' + CONFIG.SRC + '/**/*.js'], ['browserify', reload]);
 });
