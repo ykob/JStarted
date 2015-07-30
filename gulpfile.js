@@ -34,11 +34,10 @@ gulp.task('serve', ['php'], function() {
 
 gulp.task('start', sequence([
   'sass',
-  'browserify'
+  'watchify'
 ], 'serve'));
 
 gulp.task('default', ['start'], function() {
   gulp.watch(['./' + CONFIG.DST + '/**/*.php'], [reload]);
   gulp.watch(['./' + CONFIG.SRC + '/**/*.{scss,sass}'], ['sass', reload]);
-  gulp.watch(['./' + CONFIG.SRC + '/**/*.js'], ['browserify', reload]);
 });
