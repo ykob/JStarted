@@ -1,3 +1,11 @@
+<?php
+  $path = get_bloginfo('stylesheet_directory');
+  $title = get_bloginfo('name');
+  $url = '';
+  $description = '';
+  $ogimg = '';
+  $ogtype = 'website';
+?>
 <!DOCTYPE html>
 <html>
   <head>
