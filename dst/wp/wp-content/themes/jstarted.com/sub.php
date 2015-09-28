@@ -10,7 +10,7 @@
               Yoichi Kobayashi
             </h3>
             <p class="writer-profile">
-              東京ではたらくフロントエンドエンジニア。今はcanvas/物理/数学あたりを勉強中です。
+              東京ではたらくフロントエンドエンジニア。今はcanvas/物理/数学/WebGLを勉強中です。
             </p>
             <ul class="writer-account-list">
               <li><a href="https://www.facebook.com/ykob1984" target="_blank">Facebook</a></li>
