@@ -7,5 +7,5 @@ http://www.jstarted.com/
 ## npm install
 
 ```
-npm i browser-sync browserify gulp gulp-ruby-sass gulp-sequence require-dir vinyl-source-stream watchify gulp-connect-php
+npm i --save-dev browser-sync browserify gulp gulp-ruby-sass gulp-sequence require-dir vinyl-source-stream watchify sass-mediaqueries
 ```
