@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var browserSync = require('browser-sync');
 var browserify = require('browserify');
 var watchify = require('watchify');
 var source = require('vinyl-source-stream');
@@ -8,7 +7,6 @@ var CONFIG = require('../package.json').projectConfig;
 var browserifyOpts = {
   entries: ['./' + CONFIG.SRC + '/js/main.js']
 };
-var reload = browserSync.reload;
 
 var bundler = function(watch) {
   var b;
@@ -34,11 +32,7 @@ var bundler = function(watch) {
   };
 
   b
-    .on('update', bundle)
-    .on('log', function(message) {
-      reload();
-      return console.log(message);
-    });
+    .on('update', bundle);
 
   return bundle();
 };
