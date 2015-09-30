@@ -13,7 +13,20 @@ npm i --save sass-mediaqueries normalize.css
 
 ## mediaqueries set
 
+基準値は以下を参照している。
+
+1. iPhone6 Plus Portrait
+2. iPad Portrait
+3. iPad Landscape
+4. WXGA (Wide XGA)
+
 ```
+$range-mobile: 414px;
+$range-tablet: 768px;
+$range-screen-small: 1024px;
+$range-screen-large: 1280px;
+
+
 @include max-screen($range-mobile) {
   ...
 }
