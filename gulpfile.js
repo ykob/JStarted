@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var php = require('gulp-connect-php');
 var sequence = require('gulp-sequence');
 var requireDir = require('require-dir');
 var CONFIG = require('./package.json').projectConfig;
