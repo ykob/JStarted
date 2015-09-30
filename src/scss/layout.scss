@@ -18,3 +18,19 @@
   top: 30px;
   right: 30px;
 }
+
+@include max-screen($range-mobile) {
+
+}
+@include screen($range-mobile, $range-tablet) {
+  
+}
+@include screen($range-tablet, $range-screen-small) {
+  
+}
+@include screen($range-screen-small, $range-screen-large) {
+  
+}
+@include min-screen($range-screen-large) {
+  
+}
