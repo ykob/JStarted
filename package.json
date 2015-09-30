@@ -24,8 +24,11 @@
     "gulp-ruby-sass": "^2.0.3",
     "gulp-sequence": "^0.4.1",
     "require-dir": "^0.3.0",
-    "sass-mediaqueries": "^1.6.1",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.4.0"
+  },
+  "dependencies": {
+    "normalize.css": "^3.0.3",
+    "sass-mediaqueries": "^1.6.1"
   }
 }
