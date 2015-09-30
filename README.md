@@ -11,9 +11,9 @@ npm i --save-dev browser-sync browserify gulp gulp-ruby-sass gulp-sequence requi
 npm i --save sass-mediaqueries normalize.css
 ```
 
-```
 ## mediaqueries set
 
+```
 @include max-screen($range-mobile) {
   ...
 }
