@@ -22,7 +22,7 @@
         <p class="website-summary">
           フロントエンドエンジニアによるJavaScript/HTML/CSSのノウハウや覚書を掲載しています。
         </p>
-        <div class="gmenu-rss">
+        <div class="website-feed">
           <a href="">
             RSS
           </a>
