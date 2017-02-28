@@ -1,1 +1,13 @@
+mixin title
+  .l-gh__title-en
+    |jstarted.com
+  .l-gh__title-ja
+    |JavaScript/HTML/CSSのノウハウや覚書を掲載するブログ。
+
 .l-gh
+  if (page.id == 'index')
+    h1.l-gh__title
+      +title
+  else
+    a.l-gh__title(href = "/")
+      +title
