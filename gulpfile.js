@@ -1,15 +1,60 @@
-var gulp = require('gulp');
-var sequence = require('gulp-sequence');
-var requireDir = require('require-dir');
-var CONFIG = require('./package.json').projectConfig;
+const gulp = require('gulp');
+const requireDir = require('require-dir');
+const runSequence = require('run-sequence');
+const browserSync = require('browser-sync');
+const reload = browserSync.reload;
 
-requireDir('./tasks');
+const DIR = require('./gulp/conf').DIR;
 
-gulp.task('start', sequence([
-  'sass',
-  'watchify'
-]));
+requireDir('./gulp/tasks');
 
-gulp.task('default', ['start'], function() {
-  gulp.watch(['./' + CONFIG.SRC + '/**/*.{scss,sass}'], ['sass']);
+gulp.task('predefault', cb => {
+  runSequence(
+    'cleanDest',
+    'sprite',
+    ['pug', 'sass', 'watchify', 'vendorScripts', 'copyToDest'],
+    'serve',
+    cb
+  );
+});
+
+gulp.task('default', ['predefault'], () => {
+  gulp.watch(
+    [`./${DIR.SRC}/**/*.pug`],
+    ['pug', reload]
+  );
+
+  gulp.watch(
+    [`./${DIR.SRC}/**/*.{scss,sass}`],
+    ['sass', reload]
+  );
+
+  gulp.watch(
+    [`./${DIR.DEST}/**/*.js`],
+    reload
+  );
+
+  gulp.watch(
+    [
+      `./${DIR.SRC}/img/**/*.*`,
+      `./${DIR.SRC}/font/**/*.*`,
+    ],
+    ['copyToDest', reload]
+  );
+});
+
+gulp.task('build', cb => {
+  runSequence(
+    'cleanDest',
+    'sprite',
+    ['pug', 'sass', 'browserify', 'vendorScripts', 'copyToDest'],
+    'cleanBuild',
+    'replaceHtml',
+    'cleanCss',
+    'imagemin',
+    'uglify',
+    ['copyToBuild', 'copyPhpToBuild'],
+    'sitemap',
+    cb
+  );
 });
