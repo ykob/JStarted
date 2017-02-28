@@ -1,16 +1,32 @@
 {
   "meta": {
-    "domain": "http://www.tplh.net",
-    "websiteName": "website name",
-    "keywords": "keyword base"
+    "domain": "http://www.jstarted.com/",
+    "websiteName": "jstarted.com",
+    "keywords": "JavaScript"
   },
   "pages": {
     "index": {
-      "title": "page title",
-      "keywords": "keyword1, keyword2",
-      "description": "page description",
+      "title": "",
+      "keywords": "",
+      "description": "JavaScript/HTML/CSSのノウハウや覚書を掲載するブログ。",
       "path": "/",
-      "ogpDescription": "page ogp description",
+      "ogpDescription": "JavaScript/HTML/CSSのノウハウや覚書を掲載するブログ。",
+      "ogpImg": "ogp.jpg"
+    },
+    "archive": {
+      "title": "アーカイブ",
+      "keywords": "",
+      "description": "",
+      "path": "/",
+      "ogpDescription": "",
+      "ogpImg": "ogp.jpg"
+    },
+    "single": {
+      "title": "個別記事",gu
+      "keywords": "",
+      "description": "",
+      "path": "/",
+      "ogpDescription": "",
       "ogpImg": "ogp.jpg"
     }
   }
