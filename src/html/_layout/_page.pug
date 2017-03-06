@@ -11,7 +11,10 @@ html(lang="ja")
     .l-page
       include ./_gh.pug
       .l-contents
-        block content
+        .l-contents__main
+          block content
+        .l-contents__sub
+          include ./_sub.pug
       include ./_gf.pug
     block script
     script(src="/js/vendor.js")
