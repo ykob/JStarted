@@ -7,6 +7,13 @@ body {
   font-family: $font-jp;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.05em;
+  @include l-more-than-mobile {
+    @include fontSize(14);
+  }
+  @include l-mobile {
+    @include fontSize(13);
+  }
 }
 input, button, select {
   appearance: none;
