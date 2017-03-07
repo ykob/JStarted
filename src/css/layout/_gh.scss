@@ -1,6 +1,7 @@
 .l-gh {
   &__title {
     font-weight: 400;
+    text-transform: uppercase;
     @include l-pc-all {
       margin-bottom: 50px;
     }
@@ -15,15 +16,15 @@
       color: $color-text-black;
       font-family: $font-en;
       text-decoration: none;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.05em;
       @include l-pc-all {
-        @include fontSize(64);
+        @include fontSize(54);
       }
       @include l-tablet {
-        @include fontSize(48);
+        @include fontSize(45);
       }
       @include l-mobile {
-        @include fontSize(32);
+        @include fontSize(36);
       }
     }
     &-ja {
