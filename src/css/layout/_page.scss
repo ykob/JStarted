@@ -7,16 +7,17 @@
   @include l-pc-all {
     margin-top: 50px;
     display: flex;
+    justify-content: space-between;
   }
   @include l-tablet {
-    margin-top: 30px;
+    margin-top: 40px;
   }
   @include l-mobile {
     margin: 30px 20px;
   }
   &__main {
     @include l-pc-all {
-      width: (18 / 26) * 100%;
+      width: (16 / 26) * 100%;
     }
   }
   &__sub {
