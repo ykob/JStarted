@@ -7,7 +7,6 @@
   @include l-pc-all {
     margin-top: 50px;
     display: flex;
-    justify-content: space-between;
   }
   @include l-tablet {
     margin-top: 40px;
@@ -23,6 +22,7 @@
   &__sub {
     @include l-pc-all {
       width: (8 / 26) * 100%;
+      margin-left: auto;
     }
   }
 }
