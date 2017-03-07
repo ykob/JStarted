@@ -5,3 +5,12 @@ block vars
     var page = pages.index;
 
 block content
+  .c-entries
+    - for (var i = 0; i < 5; i++)
+      a.c-entries__item(href="single.html")
+        .c-entries__item-date
+          |2017.12.31
+        .c-entries__item-title
+          |タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+        .c-entries__item-description
+          |概要文ですテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
