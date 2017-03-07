@@ -1,2 +1,41 @@
 .l-gh {
+  &__title {
+    font-weight: 400;
+    @include l-pc-all {
+      margin: 50px 0;
+    }
+    @include l-tablet {
+      margin: 30px 0;
+    }
+    @include l-mobile {
+      margin: 30px 0;
+    }
+    &-en {
+      line-height: 1;
+      color: $color-text-black;
+      font-family: $font-en;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      @include l-pc-all {
+        @include fontSize(64);
+      }
+      @include l-tablet {
+        @include fontSize(48);
+      }
+      @include l-mobile {
+        @include fontSize(32);
+      }
+    }
+    &-ja {
+      @include l-pc-all {
+        margin-top: 15px;
+      }
+      @include l-tablet {
+        margin-top: 10px;
+      }
+      @include l-mobile {
+        margin-top: 5px;
+      }
+    }
+  }
 }

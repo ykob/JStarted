@@ -1,13 +1,17 @@
-mixin title
-  .l-gh__title-en
-    |jstarted.com
-  .l-gh__title-ja
-    |JavaScript/HTML/CSSのノウハウや覚書を掲載するブログ。
+-
+  var title = 'jstarted.com';
+  var description = 'JavaScript/HTML/CSSのノウハウや覚書を掲載するブログ';  
 
 .l-gh
   if (page.id == 'index')
     h1.l-gh__title
-      +title
+      .l-gh__title-en
+        |#{title}
+      .l-gh__title-ja
+        |#{description}
   else
-    a.l-gh__title(href = "/")
-      +title
+    .l-gh__title
+      a.l-gh__title-en(href="/")
+        |#{title}
+      .l-gh__title-ja
+        |#{description}
