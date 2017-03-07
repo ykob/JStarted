@@ -1,0 +1,49 @@
+.c-entry-header {
+  &__title {
+    letter-spacing: 0.1em;
+    @include l-pc-all {
+      @include fontSize(28);
+    }
+    @include l-tablet {
+      @include fontSize(24);
+    }
+    @include l-mobile {
+      @include fontSize(20);
+    }
+  }
+  &__date {
+    line-height: 1;
+    font-family: $font-en;
+    @include l-pc-all {
+      @include fontSize(24);
+    }
+    @include l-tablet {
+      @include fontSize(20);
+    }
+    @include l-mobile {
+      @include fontSize(16);
+    }
+  }
+  &__categories {
+    &-label {
+      display: inline-block;
+      line-height: 1;
+      font-family: $font-en;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      @include l-pc-all {
+        @include fontSize(14);
+      }
+      @include l-tablet {
+        @include fontSize(14);
+      }
+      @include l-mobile {
+        @include fontSize(13);
+      }
+    }
+    &-item {
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+}
