@@ -1,2 +1,9 @@
 .l-page {
+  @include l-more-than-mobile {
+    width: (26 / 30) * 100%;
+    margin: 0 auto;
+  }
+  @include l-mobile {
+    margin: 0 20px;
+  }
 }
