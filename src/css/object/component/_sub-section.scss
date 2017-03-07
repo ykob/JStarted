@@ -1,4 +1,13 @@
 .c-sub-section {
+  @include l-pc-all {
+    margin-bottom: 50px;
+  }
+  @include l-tablet {
+    margin-bottom: 40px;
+  }
+  @include l-mobile {
+    margin-bottom: 30px;
+  }
   &__head {
     margin-top: 0;
     font-family: $font-en;
