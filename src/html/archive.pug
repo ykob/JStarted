@@ -5,3 +5,17 @@ block vars
     var page = pages.archive;
 
 block content
+  h1.c-archive-header
+    .c-archive-header__label1
+      |Archive: 
+    .c-archive-header__label2
+      |Category Name
+  .c-entries
+    - for (var i = 0; i < 5; i++)
+      a.c-entries__item(href="single.html")
+        .c-entries__item-date
+          |2017.12.31
+        .c-entries__item-title
+          |タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+        .c-entries__item-description
+          |概要文ですテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト

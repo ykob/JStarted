@@ -1,0 +1,21 @@
+.c-archive-header {
+  font-weight: 400;
+  @include l-pc-all {
+    @include fontSize(28);
+  }
+  @include l-tablet {
+    @include fontSize(24);
+  }
+  @include l-mobile {
+    @include fontSize(20);
+  }
+  &__label1 {
+    display: inline-block;
+    font-family: $font-en;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  &__label2 {
+    display: inline-block;
+  }
+}
