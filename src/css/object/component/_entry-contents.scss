@@ -1,0 +1,19 @@
+.c-entry-contents {
+  line-height: 2;
+  h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+  }
+  h2 {
+    margin-top: 2.5rem;
+  }
+  h3, h4, h5, h6 {
+    margin-top: 1.5rem;
+  }
+  p, ul, ol, dl, blockquote {
+    margin-bottom: 1.5rem;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
