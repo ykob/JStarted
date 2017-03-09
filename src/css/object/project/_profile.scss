@@ -1,0 +1,23 @@
+.p-profile {
+  display: flex;
+  align-items: center;
+  &__image {
+    @include l-mobile {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  &__body {
+    margin-left: 20px;
+  }
+  &__head {
+    margin: 0 0 10px;
+    font-family: $font-en;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  &__text {
+    margin: 0;
+  }
+}
