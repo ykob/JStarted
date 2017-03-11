@@ -1,4 +1,13 @@
 .c-entry-header {
+  @include l-pc-all {
+    margin-bottom: 50px;
+  }
+  @include l-tablet {
+    margin-bottom: 60px;
+  }
+  @include l-mobile {
+    margin-bottom: 30px;
+  }
   &__title {
     letter-spacing: 0.1em;
     @include l-pc-all {
