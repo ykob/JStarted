@@ -1,13 +1,36 @@
 .c-entry-contents {
   line-height: 2;
   h2, h3, h4, h5, h6 {
+    line-height: 1.5;
     margin-bottom: 1rem;
   }
   h2 {
-    margin-top: 2.5rem;
+    margin-top: 3rem;
+    @include l-more-than-mobile {
+      @include fontSize(21);
+    }
+    @include l-mobile {
+      @include fontSize(18);
+    }
   }
   h3, h4, h5, h6 {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+  }
+  h3 {
+    @include l-more-than-mobile {
+      @include fontSize(18);
+    }
+    @include l-mobile {
+      @include fontSize(16);
+    }
+  }
+  h4, h5, h6 {
+    @include l-more-than-mobile {
+      @include fontSize(16);
+    }
+    @include l-mobile {
+      @include fontSize(14);
+    }
   }
   p, ul, ol, dl, blockquote {
     margin-bottom: 1.5rem;
