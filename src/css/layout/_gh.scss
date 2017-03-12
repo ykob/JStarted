@@ -1,5 +1,6 @@
 .l-gh {
   &__title {
+    margin: 0;
     font-weight: 400;
     text-transform: uppercase;
     @include l-pc-all {
@@ -12,6 +13,7 @@
       margin-bottom: 30px;
     }
     &-en {
+      display: block;
       line-height: 1;
       color: $color-text-black;
       font-family: $font-en;
@@ -28,6 +30,9 @@
       }
     }
     &-ja {
+      @include l-more-than-mobile {
+        @include fontSize(14);
+      }
       @include l-pc-all {
         margin-top: 15px;
       }
@@ -36,7 +41,13 @@
       }
       @include l-mobile {
         margin-top: 5px;
+        @include fontSize(13);
       }
+    }
+    &-label {
+      display: block;
+      position: relative;
+      z-index: 10;
     }
   }
 }
