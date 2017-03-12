@@ -8,29 +8,38 @@
   @include l-mobile {
     margin-bottom: 30px;
   }
-  &__title {
-    letter-spacing: 0.1em;
-    @include l-pc-all {
-      @include fontSize(28);
-    }
-    @include l-tablet {
-      @include fontSize(24);
-    }
-    @include l-mobile {
-      @include fontSize(20);
-    }
-  }
   &__date {
     line-height: 1;
     font-family: $font-en;
     @include l-pc-all {
+      margin-bottom: 20px;
       @include fontSize(24);
     }
     @include l-tablet {
+      margin-bottom: 15px;
       @include fontSize(20);
     }
     @include l-mobile {
+      margin-bottom: 10px;
       @include fontSize(16);
+    }
+  }
+  &__title {
+    line-height: 1.75;
+    letter-spacing: 0.1em;
+    margin-top: 0;
+    margin-bottom: 0;
+    @include l-pc-all {
+      margin-bottom: 15px;
+      @include fontSize(28);
+    }
+    @include l-tablet {
+      margin-bottom: 10px;
+      @include fontSize(24);
+    }
+    @include l-mobile {
+      margin-bottom: 5px;
+      @include fontSize(20);
     }
   }
   &__categories {
@@ -53,6 +62,7 @@
     &-item {
       display: inline-block;
       margin-left: 10px;
+      text-decoration: none;
     }
   }
 }
