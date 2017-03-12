@@ -1,0 +1,5 @@
+.c-sub-section-wrap {
+  @include l-tablet {
+    width: (12 / 26) * 100%;
+  }
+}
