@@ -15,6 +15,9 @@ body {
     @include fontSize(13);
   }
 }
+a {
+  color: $color-link;
+}
 input, button, select {
   appearance: none;
 }
