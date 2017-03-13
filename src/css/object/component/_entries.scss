@@ -1,3 +1,63 @@
 .c-entries {
-  
+  @include l-pc-all {
+    margin-bottom: 50px;
+  }
+  @include l-tablet {
+    margin-bottom: 40px;
+  }
+  @include l-mobile {
+    margin-bottom: 30px;
+  }
+  &__item {
+    color: $color-text-black;
+    text-decoration: none;
+    &-date {
+      line-height: 1;
+      margin-bottom: 14px;
+      font-family: $font-en;
+      @include l-more-than-mobile {
+        @include fontSize(16);
+      }
+      @include l-mobile {
+        @include fontSize(14);
+      }
+    }
+    &-title {
+      margin-bottom: 10px;
+      font-weight: 700;
+      @include l-pc-all {
+        @include fontSize(24);
+      }
+      @include l-tablet {
+        @include fontSize(21);
+      }
+      @include l-mobile {
+        @include fontSize(18);
+      }
+    }
+    &-description {
+      margin: 0;
+    }
+    &:before {
+      width: 20px;
+      height: 1px;
+      content: '';
+      display: block;
+      background-color: $color-text-black;
+      @include l-pc-all {
+        margin: 45px 0 50px;
+      }
+      @include l-tablet {
+        margin: 25px 0 30px;
+      }
+      @include l-mobile {
+        margin: 25px 0 30px;
+      }
+    }
+    &:first-of-type {
+      &:before {
+        display: none;
+      }
+    }
+  }
 }
