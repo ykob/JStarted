@@ -3,16 +3,20 @@
     width: (26 / 30) * 100%;
     margin-right: auto;
     margin-left: auto;
-  }
-  @include l-pc-all {
-    margin-top: 50px;
-    display: flex;
-  }
-  @include l-tablet {
-    margin-top: 40px;
+    margin-bottom: 60px;
   }
   @include l-mobile {
-    margin: 30px 20px;
+    margin: 30px 20px 60px;
+  }
+  &__wrap {
+    @include l-pc-all {
+      margin-top: 50px;
+      display: flex;
+    }
+    @include l-tablet {
+      margin-top: 40px;
+    }
+
   }
   &__main {
     @include l-pc-all {

@@ -1,2 +1,37 @@
 .l-gf {
+  @include l-more-than-mobile {
+    text-align: center;
+  }
+  &:before {
+    width: 40px;
+    height: 1px;
+    content: '';
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: $color-text-black;
+    @include l-more-than-mobile {
+      margin-bottom: 50px;
+    }
+    @include l-mobile {
+      margin-bottom: 30px;
+    }
+  }
+  &__affiliate {
+    color: #999;
+    @include l-more-than-mobile {
+      @include fontSize(12);
+    }
+    @include l-mobile {
+      @include fontSize(11);
+    }
+  }
+  &__license {
+    @include l-more-than-mobile {
+      margin-top: 30px;
+    }
+    @include l-mobile {
+      margin-top: 20px;
+    }
+  }
 }

@@ -9,11 +9,12 @@ html(lang="ja")
     include ./_head.pug
   body
     .l-page
-      .l-page__main
-        include ./_gh.pug
-        block content
-      .l-page__sub
-        include ./_sub.pug
+      .l-page__wrap
+        .l-page__main
+          include ./_gh.pug
+          block content
+        .l-page__sub
+          include ./_sub.pug
       include ./_gf.pug
     block script
     script(src="/js/vendor.js")
