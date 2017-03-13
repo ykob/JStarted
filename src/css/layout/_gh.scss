@@ -3,10 +3,7 @@
     margin: 0;
     font-weight: 400;
     text-transform: uppercase;
-    @include l-pc-all {
-      margin-bottom: 50px;
-    }
-    @include l-tablet {
+    @include l-more-than-mobile {
       margin-bottom: 50px;
     }
     @include l-mobile {
