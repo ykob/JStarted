@@ -1,3 +1,73 @@
 .c-entries-s {
-  
+  &__item {
+    display: block;
+    position: relative;
+    margin-top: 15px;
+    padding: 10px 0 5px 20px;
+    color: $color-text-black;
+    text-decoration: none;
+    &-label {
+      position: relative;
+      z-index: 10;
+    }
+    &-date {
+      line-height: 1;
+      margin-bottom: 8px;
+      font-family: $font-en;
+      @include l-more-than-mobile {
+        @include fontSize(12);
+      }
+      @include l-mobile {
+        @include fontSize(11);
+      }
+    }
+    &-title {
+      @include l-more-than-mobile {
+        @include fontSize(14);
+      }
+      @include l-mobile {
+        @include fontSize(13);
+      }
+    }
+    &:before, &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0; left: 0; bottom: 0;
+      background-color: $color-text-black;
+    }
+    &:before {
+      width: 2px;
+    }
+    &:after {
+      width: 100%;
+    }
+    &:first-of-type {
+    }
+  }
+  //
+  // Interaction
+  //
+  &__item {
+    &-label {
+      transition-duration: 0.6s;
+      transition-timing-function: $easeOutCirc;
+    }
+    &:after {
+      transform: scaleX(0);
+      transform-origin: left;
+      transition-duration: 0.6s;
+      transition-timing-function: $easeOutCirc;
+    }
+    &:hover & {
+      &-label {
+        color: #fff;
+      }
+    }
+    &:hover {
+      &:after {
+        transform: scaleX(1);
+      }
+    }
+  }
 }
