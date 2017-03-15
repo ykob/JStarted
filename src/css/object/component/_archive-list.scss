@@ -1,4 +1,5 @@
 .c-archive-list {
+  line-height: 1.75;
   &__item {
     display: block;
     margin-top: 5px;
@@ -17,7 +18,7 @@
       &:before {
         width: 6px;
         height: 2px;
-        top: (1.75 / 2) * 1rem;
+        top: (1.75 / 2) * 1em;
         left: 0;
         z-index: 10;
         margin-top: -1px;
@@ -53,6 +54,7 @@
           background-color: #fff;
         }
         &:after {
+          background-color: $color-link;
           transform: scaleX(1);
         }
       }
