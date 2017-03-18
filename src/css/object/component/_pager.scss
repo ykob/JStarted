@@ -1,0 +1,8 @@
+.c-pager {
+  font-family: $font-en;
+  text-align: center;
+  &__item {
+    display: inline-block;
+    margin: 0 5px;
+  }
+}
