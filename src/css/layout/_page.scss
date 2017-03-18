@@ -16,27 +16,34 @@
     @include l-tablet {
       margin-top: 40px;
     }
-    @include l-more-than-mobile {
-      margin-bottom: 30px;
-    }
-    @include l-mobile {
-      margin-bottom: 50px;
-    }
+
   }
   &__main {
     @include l-pc-all {
       width: (16 / 26) * 100%;
+      margin-bottom: 80px;
+    }
+    @include l-tablet {
+      margin-bottom: 60px;
+    }
+    @include l-mobile {
+      margin-bottom: 50px;
     }
   }
   &__sub {
     @include l-pc-all {
       width: (8 / 26) * 100%;
       margin-left: auto;
+      margin-bottom: 30px;
     }
     @include l-tablet {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    @include l-mobile {
+      margin-bottom: 20px;
     }
   }
 }

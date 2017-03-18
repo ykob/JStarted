@@ -1,13 +1,4 @@
 .c-entries {
-  @include l-pc-all {
-    margin-bottom: 50px;
-  }
-  @include l-tablet {
-    margin-bottom: 40px;
-  }
-  @include l-mobile {
-    margin-bottom: 30px;
-  }
   &__item {
     &-wrap {
       display: block;
@@ -48,7 +39,7 @@
       display: block;
       background-color: $color-text-black;
       @include l-pc-all {
-        margin: 45px 0 50px;
+        margin: 35px 0 40px;
       }
       @include l-tablet {
         margin: 25px 0 30px;

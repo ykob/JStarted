@@ -1,14 +1,5 @@
 .c-entry-contents {
   line-height: 2;
-  @include l-pc-all {
-    margin-bottom: 50px;
-  }
-  @include l-tablet {
-    margin-bottom: 40px;
-  }
-  @include l-mobile {
-    margin-bottom: 30px;
-  }
   h2, h3, h4, h5, h6 {
     line-height: 1.75;
     margin-bottom: 1rem;
