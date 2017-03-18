@@ -1,8 +1,39 @@
 .c-pager {
   font-family: $font-en;
-  text-align: center;
+  @include l-pc-all {
+    margin-top: 70px;
+  }
+  @include l-tablet {
+    margin-top: 40px;
+  }
+  @include l-mobile {
+    margin-top: 30px;
+  }
   &__item {
+    width: 2.4em;
+    height: 2.4em;
     display: inline-block;
-    margin: 0 5px;
+    line-height: 2.4;
+    margin-left: 1px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    &--link {
+      color: #fff;
+      background-color: $color-text-black;
+      transition-timing-function: $easeOutCirc;
+      transition-duration: 0.4s;
+      &:hover {
+        background-color: $color-link;
+      }
+    }
+    &--current {
+      color: #aaa;
+      background-color: #ddd;
+    }
+    &--adjacent {
+      padding-right: 1em;
+      padding-left: 1em;
+    }
   }
 }
