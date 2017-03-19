@@ -8,10 +8,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: 0.05em;
+  background-color: $color-white;
   @include l-more-than-mobile {
+    padding: 8px;
     @include fontSize(14);
   }
   @include l-mobile {
+    padding: 5px;
     @include fontSize(13);
   }
 }
@@ -30,6 +33,6 @@ select::-ms-expand {
 }
 input::selection,
 textarea::selection {
-  color: $color-text-black;
+  color: $color-black;
   background: rgba(0, 0, 0, 0.2);
 }
