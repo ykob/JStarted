@@ -1,6 +1,8 @@
 .p-profile {
-  display: flex;
-  align-items: center;
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
   &__image {
     @include l-mobile {
       width: 80px;
@@ -19,5 +21,36 @@
   }
   &__text {
     margin: 0;
+  }
+  &__sns {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    &-item {
+      display: block;
+      &--facebook {
+        margin-right: 12px;
+      }
+      &--twitter {
+        margin-right: 10px;
+      }
+    }
+  }
+  //
+  // Interaction
+  //
+  &__sns {
+    &-item {
+      svg {
+        fill: $color-black;
+        transition-timing-function: $easeOutCirc;
+        transition-duration: 0.4s;
+      }
+      &:hover {
+        svg {
+          fill: $color-link;
+        }
+      }
+    }
   }
 }

@@ -9,14 +9,31 @@ mixin archiveListItem(label)
       |Profile
     .c-sub-section__body
       .p-profile
-        img.p-profile__image(src="/img/common/elephant.png", width=120, height=120 alt="")
-        .p-profile__body
-          h3.p-profile__head
-            |Yoichi Kobayashi
-          p.p-profile__text
-            |I am a front-end developer. 
-            br
-            |I wanna be a creative coder.
+        .p-profile__wrap
+          img.p-profile__image(src="/img/common/elephant.png", width=120, height=120 alt="")
+          .p-profile__body
+            h3.p-profile__head
+              |Yoichi Kobayashi
+            p.p-profile__text
+              |I am a front-end developer. 
+              br
+              |I wanna be a creative coder.
+            .p-profile__sns
+              a.p-profile__sns-item.p-profile__sns-item--facebook(
+                href="https://www.facebook.com/ykob1984",
+                target="_blank"
+              )
+                +iconFacebook(10)
+              a.p-profile__sns-item.p-profile__sns-item--twitter(
+                href="https://twitter.com/ykob0123",
+                target="_blank"
+              )
+                +iconTwitter(20)
+              a.p-profile__sns-item.p-profile__sns-item--github(
+                href="https://github.com/ykob",
+                target="_blank"
+              )
+                +iconGitHub(20)
 
   .c-sub-section
     h2.c-sub-section__head
