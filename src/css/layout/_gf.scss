@@ -1,24 +1,21 @@
 .l-gf {
+  color: $color-white;
+  background-color: $color-black;
   @include l-more-than-mobile {
+  }
+  @include l-pc-all {
+    padding: 60px (2 / 30) * 100%;
     text-align: center;
   }
-  &:before {
-    width: 40px;
-    height: 1px;
-    content: '';
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: $color-black;
-    @include l-more-than-mobile {
-      margin-bottom: 50px;
-    }
-    @include l-mobile {
-      margin-bottom: 30px;
-    }
+  @include l-tablet {
+    padding: 50px (2 / 30) * 100%;
+  }
+  @include l-mobile {
+    padding: 30px 20px;
   }
   &__affiliate {
-    color: #999;
+    margin-top: 0;
+    margin-bottom: 0;
     @include l-more-than-mobile {
       @include fontSize(12);
     }
@@ -27,6 +24,7 @@
     }
   }
   &__license {
+    margin-bottom: 0;
     @include l-more-than-mobile {
       margin-top: 30px;
     }

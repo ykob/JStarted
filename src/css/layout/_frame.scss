@@ -1,0 +1,22 @@
+.l-frame {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: 10000;
+  pointer-events: none;
+  @include l-more-than-mobile {
+    border: 5px solid $color-white;
+  }
+  @include l-mobile {
+    border: 3px solid $color-white;
+  }
+  &__in {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    @include l-more-than-mobile {
+      border: 3px solid $color-black;
+    }
+    @include l-mobile {
+      border: 2px solid $color-black;
+    }
+  }
+}
