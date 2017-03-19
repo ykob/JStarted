@@ -63,7 +63,8 @@
     &-item {
       position: relative;
       display: inline-block;
-      margin-left: 10px;
+      margin-left: 5px;
+      padding-right: 5px;
       color: $color-text-black;
       text-decoration: none;
       &:after {
@@ -97,6 +98,7 @@
       &:hover {
         &:after {
           transform: scaleX(1);
+          background-color: $color-link;
         }
       }
       &:hover & {
