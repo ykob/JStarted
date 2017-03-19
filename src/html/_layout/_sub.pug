@@ -1,7 +1,10 @@
-mixin archiveListItem(label)
-  .c-archive-list__item
-    a.c-archive-list__item-wrap(href="archive.html")
-      .c-archive-list__item-label #{label} (999)
+mixin linkListItem(label, href, target)
+  .c-link-list__item
+    a.c-link-list__item-wrap(
+      href = href,
+      target = (target) ? target : ''
+    )
+      .c-link-list__item-label #{label} 
 
 .c-sub-section-wrap
   .c-sub-section
@@ -37,23 +40,31 @@ mixin archiveListItem(label)
 
   .c-sub-section
     h2.c-sub-section__head
+      |Links
+    .c-sub-section__body
+      .c-link-list
+        +linkListItem('www.tplh.net', 'http://www.tplh.net/', '_blank')
+        +linkListItem('sketch of three.js', 'http://ykob.github.io/sketch-threejs/', '_blank')
+
+  .c-sub-section
+    h2.c-sub-section__head
       |Categories
     .c-sub-section__body
-      .c-archive-list
-        +archiveListItem('Category Name')
-        +archiveListItem('Category Name')
-        +archiveListItem('Category Name')
-        +archiveListItem('Category Name')
+      .c-link-list
+        +linkListItem('Category Name (999)', 'archive.html')
+        +linkListItem('Category Name (999)', 'archive.html')
+        +linkListItem('Category Name (999)', 'archive.html')
+        +linkListItem('Category Name (999)', 'archive.html')
 
   .c-sub-section
     h2.c-sub-section__head
       |Yearly Arhchives
     .c-sub-section__body
-      .c-archive-list
-        +archiveListItem('2017')
-        +archiveListItem('2016')
-        +archiveListItem('2015')
-        +archiveListItem('2014')
+      .c-link-list
+        +linkListItem('2017 (999)', 'archive.html')
+        +linkListItem('2016 (999)', 'archive.html')
+        +linkListItem('2015 (999)', 'archive.html')
+        +linkListItem('2014 (999)', 'archive.html')
 
 .c-sub-section-wrap
   .c-sub-section
