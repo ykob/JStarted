@@ -38,9 +38,23 @@
   h6 {
     font-weight: 400;
   }
-  p, ul, ol, dl, blockquote {
+  p, ul, ol, dl, blockquote, iframe, table {
     margin-top: 0;
     margin-bottom: 1.5rem;
+  }
+  table {
+    tbody {
+      th, td {
+        padding: 1rem;
+      }
+      th {
+        text-align: left;
+        background-color: #ddd;
+      }
+      td {
+        background-color: #e9e9e9;
+      }
+    }
   }
   img {
     display: block;

@@ -9,31 +9,28 @@
   @include l-mobile {
     margin-top: 30px;
   }
-  &__item {
-    width: 2.4em;
+  a, span {
     height: 2.4em;
     display: inline-block;
     line-height: 2.4;
     margin-left: 1px;
+    padding-right: 1em;
+    padding-left: 1em;
     text-decoration: none;
     text-align: center;
     text-transform: uppercase;
-    &--link {
-      color: #fff;
-      background-color: $color-black;
-      transition-timing-function: $easeOutCirc;
-      transition-duration: 0.4s;
-      &:hover {
-        background-color: $color-link;
-      }
+  }
+  a {
+    color: #fff;
+    background-color: $color-black;
+    transition-timing-function: $easeOutCirc;
+    transition-duration: 0.4s;
+    &:hover {
+      background-color: $color-link;
     }
-    &--current {
-      color: #aaa;
-      background-color: #ddd;
-    }
-    &--adjacent {
-      padding-right: 1em;
-      padding-left: 1em;
-    }
+  }
+  span {
+    color: #aaa;
+    background-color: #ddd;
   }
 }
