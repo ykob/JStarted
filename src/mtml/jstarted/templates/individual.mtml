@@ -1,0 +1,30 @@
+<mt:setvarblock name="entry_categories"><mt:entrycategories glue=","><$mt:categorylabel$></mt:entrycategories></mt:setvarblock>
+<mt:setvarblock name="title"><$mt:entrytitle remove_html="1"$> | <$mt:blogname$></mt:setvarblock>
+<mt:setvarblock name="description"><$mt:entryexcerpt convert_breaks="0"$></mt:setvarblock>
+<mt:setvarblock name="url"><$mt:entrylink$></mt:setvarblock>
+<mt:if tag="ogimage"><mt:setvarblock name="ogimage"><mt:ogimageAsset><$mt:asseturl$></mt:ogimageAsset></mt:setvarblock></mt:if>
+<$mt:setvar name="template_type" value="entry" $>
+
+<$mt:include module="ヘッダー"$>
+
+<div class="c-entry-header">
+  <div class="c-entry-header__date"><$mt:entrydate format="%Y.%b.%e"$></div>
+  <h1 class="c-entry-header__title"><$mt:entrytitle$></h1>
+  <div class="c-entry-header__categories">
+    <div class="c-entry-header__categories-label">Category:</div>
+    <mt:entrycategories>
+      <a class="c-entry-header__categories-item" href="<$mt:categoryarchivelink$>" title="<$mt:categorylabel$>の記事一覧を見る">
+        <div class="c-entry-header__categories-item-label"><$mt:categorylabel$></div>
+      </a>
+    </mt:entrycategories>
+  </div>
+</div>
+<div class="c-entry-contents">
+  <$mt:entrybody$>
+  <div class="c-ad-banner">
+    <script src="http://adm.shinobi.jp/s/391092be09782b6f1113040fa7e542e5"></script>
+  </div>
+  <$mt:entrymore$>
+</div>
+
+<$mt:include module="フッター"$>

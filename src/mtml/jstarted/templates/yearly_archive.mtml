@@ -1,0 +1,15 @@
+<mt:setvarblock name="title"><$mt:archivetitle$>の記事一覧 | <$mt:blogname$></mt:setvarblock>
+<mt:setvarblock name="description"><$mt:blogname$> - <$mt:archivetitle$>の記事一覧です。</mt:setvarblock>
+<mt:setvarblock name="url"><$mt:archivelink$></mt:setvarblock>
+<$mt:setvar name="template_type" value="archive" $>
+
+<$mt:include module="ヘッダー"$>
+
+<h1 class="c-archive-header">
+  <div class="c-archive-header__label1">Archive: </div>
+  <div class="c-archive-header__label2"><$mt:archivetitle$></div>
+</h1>
+
+<$mt:include module="entry_list"$>
+
+<$mt:include module="フッター"$>
