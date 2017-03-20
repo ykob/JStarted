@@ -16,7 +16,6 @@
 // Base
 @import "foundation/_normalize";
 @import "foundation/_global";
-//@import "foundation/_sprite";
 
 // ==========================================================================
 // Layout
@@ -57,4 +56,4 @@
 // -----------------------------------------------------------------
 // Vendor
 // -----------------------------------------------------------------
-// @import "object/vendor/_xxx";
+@import "object/vendor/highlight.js/atom-one-dark";
