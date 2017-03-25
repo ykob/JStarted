@@ -1,40 +1,46 @@
 .c-entry-header {
+  color: $color-white;
+  border-radius: 3px;
+  background-color: $color-black;
   @include l-pc-all {
+    padding: 30px;
     margin-bottom: 50px;
   }
   @include l-tablet {
+    padding: 30px;
     margin-bottom: 50px;
   }
   @include l-mobile {
+    padding: 20px;
     margin-bottom: 30px;
   }
   &__date {
     line-height: 1;
     font-family: $font-en;
     @include l-pc-all {
-      margin-bottom: 20px;
-      @include fontSize(24);
+      margin-bottom: 15px;
+      @include fontSize(21);
     }
     @include l-tablet {
-      margin-bottom: 15px;
-      @include fontSize(20);
+      margin-bottom: 10px;
+      @include fontSize(18);
     }
     @include l-mobile {
       margin-bottom: 10px;
-      @include fontSize(16);
+      @include fontSize(15);
     }
   }
   &__title {
-    line-height: 1.75;
+    line-height: 1.5;
     letter-spacing: 0.1em;
     margin-top: 0;
     margin-bottom: 0;
     @include l-pc-all {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       @include fontSize(28);
     }
     @include l-tablet {
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       @include fontSize(24);
     }
     @include l-mobile {
@@ -65,14 +71,14 @@
       display: inline-block;
       margin-left: 5px;
       padding-right: 5px;
-      color: $color-black;
+      color: $color-white;
       text-decoration: none;
       &:after {
         content: '';
         display: block;
         position: absolute;
         top: 0; right: 0; bottom: 0; left: 0;
-        background-color: $color-black;
+        background-color: $color-link;
       }
       &-label {
         position: relative;
