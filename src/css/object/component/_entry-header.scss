@@ -41,35 +41,30 @@
   }
   &__date {
     line-height: 1;
+    margin-bottom: 10px;
     font-family: $font-en;
     @include l-pc-all {
-      margin-bottom: 15px;
       @include fontSize(21);
     }
     @include l-tablet {
-      margin-bottom: 10px;
       @include fontSize(18);
     }
     @include l-mobile {
-      margin-bottom: 10px;
       @include fontSize(15);
     }
   }
   &__title {
     line-height: 1.5;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     @include l-pc-l {
-      margin-bottom: 15px;
       @include fontSize(28);
     }
     @include l-pc-and-tablet {
-      margin-bottom: 10px;
       @include fontSize(24);
     }
     @include l-mobile {
-      margin-bottom: 10px;
       @include fontSize(20);
     }
   }

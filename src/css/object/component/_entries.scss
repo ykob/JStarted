@@ -7,17 +7,20 @@
     }
     &-date {
       line-height: 1;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
       font-family: $font-en;
-      @include l-more-than-mobile {
-        @include fontSize(16);
+      @include l-pc-all {
+        @include fontSize(21);
+      }
+      @include l-tablet {
+        @include fontSize(18);
       }
       @include l-mobile {
-        @include fontSize(14);
+        @include fontSize(15);
       }
     }
     &-title {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       font-weight: 700;
       @include l-pc-all {
         @include fontSize(24);
