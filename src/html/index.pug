@@ -9,10 +9,13 @@ block content
     - for (var i = 0; i < 5; i++)
       .c-entries__item
         a.c-entries__item-wrap(href="single.html")
-          .c-entries__item-date
-            |2017.12.31
-          .c-entries__item-title
-            |タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
-          .c-entries__item-description
-            |概要文ですテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          .c-entries__item-eyecatch
+            img(src="/img/common/thumb_noimg.png", alt="")
+          .c-entries__item-body
+            .c-entries__item-date
+              |2017.12.31
+            .c-entries__item-title
+              |タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル
+            .c-entries__item-description
+              |概要文ですテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
   include ./_modules/_pager.pug

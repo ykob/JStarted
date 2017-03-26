@@ -1,18 +1,51 @@
 .c-entries {
   &__item {
+    margin-bottom: 30px;
     &-wrap {
-      display: block;
+      display: flex;
       color: $color-black;
       text-decoration: none;
     }
-    &-date {
-      line-height: 1;
-      margin-bottom: 10px;
-      font-family: $font-en;
+    &-eyecatch {
+      overflow: hidden;
+      border-radius: 3px;
       @include l-pc-all {
-        @include fontSize(21);
+        width: (4 / 16) * 100%;
       }
       @include l-tablet {
+        width: (6 / 26) * 100%;
+      }
+      @include l-mobile {
+        width: (4 / 16) * 100%;
+      }
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    &-body {
+      box-sizing: border-box;
+      @include l-pc-all {
+        width: (12 / 16) * 100%;
+        padding-left: 30px;
+      }
+      @include l-tablet {
+        width: (20 / 26) * 100%;
+        padding-left: 30px;
+      }
+      @include l-mobile {
+        width: (12 / 16) * 100%;
+        padding-left: 20px;
+      }
+    }
+    &-date {
+      line-height: 1;
+      margin-bottom: 12px;
+      font-family: $font-en;
+      @include l-pc-l {
+        @include fontSize(21);
+      }
+      @include l-pc-and-tablet {
         @include fontSize(18);
       }
       @include l-mobile {
@@ -20,36 +53,21 @@
       }
     }
     &-title {
+      line-height: 1.5;
       margin-bottom: 8px;
       font-weight: 700;
-      @include l-pc-all {
+      @include l-pc-l {
         @include fontSize(24);
       }
-      @include l-tablet {
+      @include l-pc-and-tablet {
         @include fontSize(21);
       }
       @include l-mobile {
-        @include fontSize(18);
+        @include fontSize(16);
       }
     }
     &-description {
       margin: 0;
-    }
-    &:before {
-      width: 20px;
-      height: 1px;
-      content: '';
-      display: block;
-      background-color: $color-black;
-      @include l-pc-all {
-        margin: 35px 0 40px;
-      }
-      @include l-tablet {
-        margin: 25px 0 30px;
-      }
-      @include l-mobile {
-        margin: 25px 0 30px;
-      }
     }
     &:first-of-type {
       &:before {
