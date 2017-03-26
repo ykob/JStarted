@@ -1,18 +1,43 @@
 .c-entry-header {
-  color: $color-white;
+  overflow: hidden;
+  position: relative;
   border-radius: 3px;
+  color: $color-white;
   background-color: $color-black;
   @include l-pc-all {
-    padding: 30px;
     margin-bottom: 50px;
   }
   @include l-tablet {
-    padding: 30px;
     margin-bottom: 50px;
   }
   @include l-mobile {
-    padding: 20px;
     margin-bottom: 30px;
+  }
+  &__eyecatch {
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  &__wrap {
+    @include l-more-than-mobile {
+      position: absolute;
+      right: 0; bottom: 0; left: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    @include l-pc-all {
+      padding: 30px;
+    }
+    @include l-tablet {
+      padding: 30px;
+    }
+    @include l-mobile {
+      padding: 20px;
+    }
+    &--no-eyecatch {
+      position: relative;
+    }
   }
   &__date {
     line-height: 1;
@@ -35,11 +60,11 @@
     letter-spacing: 0.1em;
     margin-top: 0;
     margin-bottom: 0;
-    @include l-pc-all {
+    @include l-pc-l {
       margin-bottom: 15px;
       @include fontSize(28);
     }
-    @include l-tablet {
+    @include l-pc-and-tablet {
       margin-bottom: 10px;
       @include fontSize(24);
     }
