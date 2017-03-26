@@ -8,4 +8,16 @@
   &-i {
     display: inline;
   }
+  &-f {
+    display: flex;
+    &--jc {
+      justify-content: center;
+    }
+    &--jfs {
+      justify-content: flex-start;
+    }
+    &--jfe {
+      justify-content: flex-end;
+    }
+  }
 }

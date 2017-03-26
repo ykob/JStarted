@@ -1,5 +1,13 @@
 .c-ad-banner {
+  overflow: hidden;
   margin-top: 3rem;
   margin-bottom: 3rem;
   text-align: center;
+  @include l-mobile {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+  iframe {
+    margin: 0 !important;
+  }
 }
