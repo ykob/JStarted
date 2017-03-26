@@ -11,7 +11,7 @@
       "description": "JavaScript/HTML/CSSのノウハウや覚書を掲載するブログ。",
       "path": "/",
       "ogpDescription": "JavaScript/HTML/CSSのノウハウや覚書を掲載するブログ。",
-      "ogpImg": "ogp.jpg"
+      "ogpImg": "ogp.png"
     },
     "archive": {
       "title": "アーカイブ",
@@ -19,7 +19,7 @@
       "description": "",
       "path": "/",
       "ogpDescription": "",
-      "ogpImg": "ogp.jpg"
+      "ogpImg": "ogp.png"
     },
     "single": {
       "title": "個別記事",
@@ -27,7 +27,7 @@
       "description": "",
       "path": "/",
       "ogpDescription": "",
-      "ogpImg": "ogp.jpg"
+      "ogpImg": "ogp.png"
     }
   }
 }
