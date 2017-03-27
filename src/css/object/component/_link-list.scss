@@ -62,10 +62,18 @@
     &-label {
       transition-duration: 0.6s;
       transition-timing-function: $easeOutCirc;
+      svg {
+        fill: $color-black;
+        transition-duration: 0.6s;
+        transition-timing-function: $easeOutCirc;
+      }
     }
     &-wrap:hover & {
       &-label {
-        color: #fff;
+        color: $color-white;
+        svg {
+          fill: $color-white;
+        }
       }
     }
   }

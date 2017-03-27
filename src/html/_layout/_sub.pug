@@ -5,6 +5,8 @@ mixin linkListItem(label, href, target)
       target = (target) ? target : ''
     )
       .c-link-list__item-label #{label} 
+        if (target == '_blank')
+          +iconExternal(18)
 
 .c-sub-section-wrap
   .c-sub-section
